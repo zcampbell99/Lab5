@@ -8,7 +8,7 @@
  * Spring 2018
  */
 
-package assignment4;
+package assignment5;
 
 public class Critter4 extends Critter {
     // Gorilla Critter
@@ -17,6 +17,11 @@ public class Critter4 extends Critter {
     public String toString() { return "4"; }
 
     private int dir;
+
+    // Temporary Shape
+    public CritterShape viewShape() {
+        return CritterShape.STAR;
+    }
 
     /**
      * Critter4 Constructor

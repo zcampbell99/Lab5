@@ -8,7 +8,7 @@
  * Spring 2018
  */
 
-package assignment4;
+package assignment5;
 
 public class Critter1 extends Critter {
     //elephant Critter
@@ -18,6 +18,11 @@ public class Critter1 extends Critter {
     private static final int GENE_TOTAL = 24;
     private int[] genes = new int[8];
     private int dir;
+
+    // Temporary Shape
+    public CritterShape viewShape() {
+        return CritterShape.STAR;
+    }
 
     public Critter1() {
         for (int k = 0; k < 8; k += 1) {

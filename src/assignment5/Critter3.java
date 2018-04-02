@@ -8,7 +8,7 @@
  * Spring 2018
  */
 
-package assignment4;
+package assignment5;
 
 public class Critter3 extends Critter {
     // Rabbit Critter
@@ -22,6 +22,11 @@ public class Critter3 extends Critter {
 
     private int dir;
     private boolean didRep;
+
+    // Temporary Shape
+    public CritterShape viewShape() {
+        return CritterShape.STAR;
+    }
 
     /**
      * Critter3 Constructor
