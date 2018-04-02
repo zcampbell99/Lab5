@@ -15,20 +15,41 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.io.*;
-import assignment5.Critter;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.ColorPicker;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
+import javafx.scene.Parent;
+import javafx.stage.Stage;
+import javafx.scene.control.Button;
 
 /*
  * Usage: java <pkgname>.Main <input file> test
  * input file is optional.  If input file is specified, the word 'test' is optional.
  * May not use 'test' argument without specifying input file.
  */
-public class Main {
+public class Main extends Application {
+	private static final int width = 400;
+	private static final int height = 500;
+	private GraphicsContext gc;
+	private ColorPicker colorPicker;
+	private Color color = Color.BLACK;
+	private Button clrButton;
+	BorderPane pane;
+
 
 	static Scanner kb;	// scanner connected to keyboard input, or input file
 	private static String inputFile;	// input file, used instead of keyboard input if specified
 	static ByteArrayOutputStream testOutputString;	// if test specified, holds all console output
 	private static String myPackage;	// package of Critter file.  Critter cannot be in default pkg.
-	private static boolean DEBUG = false; // Use it or not, as you wish!
 	static PrintStream old = System.out;	// if you want to restore output to console
 
 
@@ -43,44 +64,34 @@ public class Main {
 	 * and the second is test (for test output, where all output to be directed to a String), or nothing.
 	 */
 	public static void main(String[] args) {
-		if (args.length != 0) {
-			try {
-				inputFile = args[0];
-				kb = new Scanner(new File(inputFile));
-			} catch (FileNotFoundException e) {
-				System.out.println("USAGE: java Main OR java Main <input file> <test output>");
-				e.printStackTrace();
-			} catch (NullPointerException e) {
-				System.out.println("USAGE: java Main OR java Main <input file>  <test output>");
-			}
-			if (args.length >= 2) {
-				if (args[1].equals("test")) { // if the word "test" is the second argument to java
-					// Create a stream to hold the output
-					testOutputString = new ByteArrayOutputStream();
-					PrintStream ps = new PrintStream(testOutputString);
-					// Save the old System.out.
-					old = System.out;
-					// Tell Java to use the special stream; all console output will be redirected here from now
-					System.setOut(ps);
-				}
-			}
-		} else { // if no arguments to main
-			kb = new Scanner(System.in); // use keyboard and console
-		}
+		launch(args);
+	}
 
-		/* Do not alter the code above for your submission. */
-		/* Write your code below. */
+	@Override
+	public void start(Stage stage) throws Exception {
+		Parent root = FXMLLoader.load(getClass().getResource("SceneBuilderFile.fxml"));
 
-		// System.out.println("GLHF");
-		ArrayList<String> input;                         //array list that holds the input command
-		input = parse(kb);
-		while(input.size() != 0) {
-			//put all code to run the critter world here
-			input = parse(kb);
-		}
-		/* Write your code above */
-		System.out.flush();
+		stage.setTitle("CritterWorld Controls");
+//		pane = new BorderPane();
+//		Canvas canvas = new Canvas(width, height);
+//		pane.setCenter(canvas);
+//		gc = canvas.getGraphicsContext2D();
+//
+//		colorPicker = new ColorPicker();
+//		pane.setTop(colorPicker);
+//		colorPicker.setValue(color);
+//
+//		//colorPicker.setOnAction(new ColorChanger());
+//
+//		colorPicker.setOnAction(e -> {
+//			color = colorPicker.getValue();
+//			gc.setStroke(color);
+//		});
 
+
+		Scene scene = new Scene(root, width, height);
+		stage.setScene(scene);
+		stage.show();
 	}
 
 	/**
