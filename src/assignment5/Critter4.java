@@ -10,6 +10,8 @@
 
 package assignment5;
 
+import javafx.scene.paint.Color;
+
 public class Critter4 extends Critter {
     // Gorilla Critter
 
@@ -17,6 +19,16 @@ public class Critter4 extends Critter {
     public String toString() { return "4"; }
 
     private int dir;
+
+    @Override
+    public javafx.scene.paint.Color viewOutlineColor() {
+        return Color.GREENYELLOW;
+    }
+
+    @Override
+    public javafx.scene.paint.Color viewFillColor() {
+        return Color.GREENYELLOW;
+    }
 
     // Temporary Shape
     public CritterShape viewShape() {

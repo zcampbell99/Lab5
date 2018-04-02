@@ -10,6 +10,8 @@
 
 package assignment5;
 
+import javafx.scene.paint.Color;
+
 public class Critter3 extends Critter {
     // Rabbit Critter
 
@@ -22,6 +24,16 @@ public class Critter3 extends Critter {
 
     private int dir;
     private boolean didRep;
+
+    @Override
+    public javafx.scene.paint.Color viewOutlineColor() {
+        return Color.HOTPINK;
+    }
+
+    @Override
+    public javafx.scene.paint.Color viewFillColor() {
+        return Color.HOTPINK;
+    }
 
     // Temporary Shape
     public CritterShape viewShape() {

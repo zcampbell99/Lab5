@@ -10,6 +10,8 @@
 
 package assignment5;
 
+import javafx.scene.paint.Color;
+
 public class Critter1 extends Critter {
     //elephant Critter
     @Override
@@ -18,6 +20,16 @@ public class Critter1 extends Critter {
     private static final int GENE_TOTAL = 24;
     private int[] genes = new int[8];
     private int dir;
+
+    @Override
+    public javafx.scene.paint.Color viewOutlineColor() {
+        return Color.BLUEVIOLET;
+    }
+
+    @Override
+    public javafx.scene.paint.Color viewFillColor() {
+        return Color.BLUEVIOLET;
+    }
 
     // Temporary Shape
     public CritterShape viewShape() {
