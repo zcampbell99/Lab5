@@ -80,8 +80,8 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <ComboBox fx:id="stats_comboBox" layoutX="133.0" layoutY="-1.0" prefHeight="31.0" prefWidth="154.0" promptText="Select a Critter" />
-            <Button fx:id="runStats_btn" layoutX="297.0" layoutY="-1.0" mnemonicParsing="false" text="Run!" />
+            <ComboBox fx:id="stats_comboBox" layoutX="133.0" layoutY="-1.0" onAction="#getStats" prefHeight="31.0" prefWidth="154.0" promptText="Select a Critter" />
+            <Button fx:id="runStats_btn" layoutX="297.0" layoutY="-1.0" mnemonicParsing="false" onAction="#statsAction" text="Run!" />
             <Label layoutX="19.0" layoutY="36.0" prefHeight="21.0" prefWidth="357.0" text="PUT STATS HERE" />
          </children>
       </AnchorPane>

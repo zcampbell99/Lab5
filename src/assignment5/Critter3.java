@@ -86,8 +86,12 @@ public class Critter3 extends Critter {
         }
     }
 
-    public static void runStats(java.util.List<Critter> critter3) {
-        System.out.println(critter3.size() + " total Critter3s");
-        System.out.println("The Critter3s have reproduced a total of " + repCount + " times");
+//    public static void runStats(java.util.List<Critter> critter3) {
+//        System.out.println(critter3.size() + " total Critter3s");
+//        System.out.println("The Critter3s have reproduced a total of " + repCount + " times");
+//    }
+
+    public static String runStats(java.util.List<Critter> critter3) {
+        return critter3.size() + " total Critter3s" + "The Critter3s have reproduced a total of " + repCount + " times";
     }
 }

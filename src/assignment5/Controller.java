@@ -9,6 +9,10 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.List;
+
 public class Controller {
     private int quantityMake = 0;
     private int width = 0;
@@ -36,6 +40,7 @@ public class Controller {
     // Runs on startup
     public void initialize() {
         types_of_critters_text.getItems().addAll("Algae", "AlgaephobicCritter", "Craig", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
+        stats_comboBox.getItems().addAll("Algae", "AlgaephobicCritter", "Craig", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
         width_field.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue,
@@ -208,6 +213,34 @@ public class Controller {
     @FXML
     private String getCritters(ActionEvent ae){
         return types_of_critters_text.getValue();
+    }
+
+    @FXML
+    private void statsAction(ActionEvent ae) {
+        String critterType = getStats(ae);
+        String stats = "";
+        if (critterType == null) {
+            System.out.println("Select a valid critter type");
+            return;
+        }
+        try {
+            List<Critter> listOfCrits = Critter.getInstances(critterType);
+            if(listOfCrits.size() != 0) {   //if the critter class already exists then runStats
+                Class<?> critter_class = listOfCrits.get(0).getClass();
+                Method runs = critter_class.getMethod("runStats", java.util.List.class);
+                stats = (String)runs.invoke(null,listOfCrits);
+            } else {
+                stats = "No critters of type " + critterType + " exist.";
+            }
+            /*Update UI with the stats info*/
+        } catch (InvalidCritterException | NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoClassDefFoundError e) {
+            System.out.println("error processing: " + critterType);
+        }
+    }
+
+    @FXML
+    private String getStats(ActionEvent ae) {
+        return stats_comboBox.getValue();
     }
 
     // Quit button
