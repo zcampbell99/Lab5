@@ -24,8 +24,8 @@
       <Separator layoutX="20.0" layoutY="134.0" prefHeight="0.0" prefWidth="374.0" />
       <AnchorPane layoutX="3.0" layoutY="178.0" prefHeight="116.0" prefWidth="410.0">
          <children>
-            <ComboBox fx:id="types_of_critters" editable="true" layoutX="14.0" layoutY="15.0" onAction="#getCritters" prefHeight="31.0" prefWidth="174.0" promptText="Select a Critter" />
-            <TextField layoutX="210.0" layoutY="15.0" prefHeight="31.0" prefWidth="77.0" promptText="Quantity" />
+            <ComboBox fx:id="types_of_critters_text" editable="true" layoutX="14.0" layoutY="15.0" onAction="#getCritters" prefHeight="31.0" prefWidth="174.0" promptText="Select a Critter" />
+            <TextField fx:id="makeNum_field" layoutX="210.0" layoutY="15.0" onAction="#makeAction" prefHeight="31.0" prefWidth="77.0" promptText="Quantity" />
             <Button fx:id="make_btn" layoutX="306.0" layoutY="15.0" mnemonicParsing="false" onAction="#makeAction" prefHeight="31.0" prefWidth="80.0" text="Make!" />
             <Button fx:id="seed_btn" layoutX="103.0" layoutY="57.0" mnemonicParsing="false" onAction="#randomSeed" prefHeight="21.0" prefWidth="204.0" text="Create Random World Seed" />
             <Separator layoutX="18.0" layoutY="101.0" prefHeight="3.0" prefWidth="374.0" />
@@ -65,12 +65,12 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button fx:id="step1_btn" layoutX="9.0" layoutY="40.0" mnemonicParsing="false" onAction="#stepAction" prefHeight="31.0" prefWidth="79.0" text="Step 1" />
-            <Button fx:id="step5_btn" layoutX="100.0" layoutY="41.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Step 5" />
-            <Button fx:id="step50_btn" layoutX="9.0" layoutY="82.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Step 50" />
-            <Button fx:id="step100_btn" layoutX="100.0" layoutY="83.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Step 100" />
-            <Button fx:id="stepNum_btn" layoutX="9.0" layoutY="126.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Step" />
-            <TextField layoutX="96.0" layoutY="127.0" prefHeight="31.0" prefWidth="88.0" promptText="# of Steps" />
+            <Button fx:id="step1_btn" layoutX="9.0" layoutY="40.0" mnemonicParsing="false" onAction="#step1Action" prefHeight="31.0" prefWidth="79.0" text="Step 1" />
+            <Button fx:id="step5_btn" layoutX="100.0" layoutY="41.0" mnemonicParsing="false" onAction="#step5Action" prefHeight="31.0" prefWidth="79.0" text="Step 5" />
+            <Button fx:id="step50_btn" layoutX="9.0" layoutY="82.0" mnemonicParsing="false" onAction="#step50Action" prefHeight="31.0" prefWidth="79.0" text="Step 50" />
+            <Button fx:id="step100_btn" layoutX="100.0" layoutY="83.0" mnemonicParsing="false" onAction="#step100Action" prefHeight="31.0" prefWidth="79.0" text="Step 100" />
+            <Button fx:id="stepNum_btn" layoutX="9.0" layoutY="126.0" mnemonicParsing="false" onAction="#stepNumAction" prefHeight="31.0" prefWidth="79.0" text="Step" />
+            <TextField fx:id="stepNum_field" layoutX="96.0" layoutY="127.0" onAction="#stepNumAction" prefHeight="31.0" prefWidth="88.0" promptText="# of Steps" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="11.0" layoutY="476.0" prefHeight="60.0" prefWidth="386.0">

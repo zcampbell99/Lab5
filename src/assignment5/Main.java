@@ -24,7 +24,6 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ColorPicker;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.Parent;
@@ -70,25 +69,8 @@ public class Main extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getResource("SceneBuilderFile.fxml"));
-
 		stage.setTitle("CritterWorld Controls");
-//		pane = new BorderPane();
-//		Canvas canvas = new Canvas(width, height);
-//		pane.setCenter(canvas);
-//		gc = canvas.getGraphicsContext2D();
-//
-//		colorPicker = new ColorPicker();
-//		pane.setTop(colorPicker);
-//		colorPicker.setValue(color);
-//
-//		//colorPicker.setOnAction(new ColorChanger());
-//
-//		colorPicker.setOnAction(e -> {
-//			color = colorPicker.getValue();
-//			gc.setStroke(color);
-//		});
-
-
+		Controller.disableAll();
 		Scene scene = new Scene(root, width, height);
 		stage.setScene(scene);
 		stage.show();

@@ -25,7 +25,7 @@
       <AnchorPane layoutX="3.0" layoutY="178.0" prefHeight="116.0" prefWidth="410.0">
          <children>
             <ComboBox fx:id="types_of_critters_text" editable="true" layoutX="14.0" layoutY="15.0" onAction="#getCritters" prefHeight="31.0" prefWidth="174.0" promptText="Select a Critter" />
-            <TextField layoutX="210.0" layoutY="15.0" prefHeight="31.0" prefWidth="77.0" promptText="Quantity" />
+            <TextField fx:id="makeNum_field" layoutX="210.0" layoutY="15.0" onAction="#makeAction" prefHeight="31.0" prefWidth="77.0" promptText="Quantity" />
             <Button fx:id="make_btn" layoutX="306.0" layoutY="15.0" mnemonicParsing="false" onAction="#makeAction" prefHeight="31.0" prefWidth="80.0" text="Make!" />
             <Button fx:id="seed_btn" layoutX="103.0" layoutY="57.0" mnemonicParsing="false" onAction="#randomSeed" prefHeight="21.0" prefWidth="204.0" text="Create Random World Seed" />
             <Separator layoutX="18.0" layoutY="101.0" prefHeight="3.0" prefWidth="374.0" />
@@ -49,13 +49,13 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Slider layoutX="19.0" layoutY="48.0" prefHeight="31.0" prefWidth="154.0">
+            <Slider fx:id="anim_slider" layoutX="19.0" layoutY="48.0" prefHeight="31.0" prefWidth="154.0">
                <tooltip>
                   <Tooltip text="Slide the Number of Steps" />
                </tooltip>
             </Slider>
-            <Button layoutX="18.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Start" />
-            <Button layoutX="103.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Stop" />
+            <Button fx:id="animStart_btn" layoutX="18.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Start" />
+            <Button fx:id="animStop_btn" layoutX="103.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Stop" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="294.0" prefHeight="181.0" prefWidth="192.0">
@@ -80,8 +80,8 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <ComboBox layoutX="133.0" layoutY="-1.0" prefHeight="31.0" prefWidth="154.0" promptText="Select a Critter" />
-            <Button layoutX="297.0" layoutY="-1.0" mnemonicParsing="false" text="Run!" />
+            <ComboBox fx:id="stats_comboBox" layoutX="133.0" layoutY="-1.0" prefHeight="31.0" prefWidth="154.0" promptText="Select a Critter" />
+            <Button fx:id="runStats_btn" layoutX="297.0" layoutY="-1.0" mnemonicParsing="false" text="Run!" />
             <Label layoutX="19.0" layoutY="36.0" prefHeight="21.0" prefWidth="357.0" text="PUT STATS HERE" />
          </children>
       </AnchorPane>
