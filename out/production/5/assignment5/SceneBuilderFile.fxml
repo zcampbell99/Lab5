@@ -82,7 +82,7 @@
             </Label>
             <ComboBox fx:id="stats_comboBox" layoutX="133.0" layoutY="-1.0" onAction="#getStats" prefHeight="31.0" prefWidth="154.0" promptText="Select a Critter" />
             <Button fx:id="runStats_btn" layoutX="297.0" layoutY="-1.0" mnemonicParsing="false" onAction="#statsAction" text="Run!" />
-            <Label layoutX="19.0" layoutY="36.0" prefHeight="21.0" prefWidth="357.0" text="PUT STATS HERE" />
+            <Label fx:id="stats_label" alignment="CENTER" layoutX="9.0" layoutY="40.0" prefHeight="31.0" prefWidth="386.0" textAlignment="CENTER" wrapText="true" />
          </children>
       </AnchorPane>
       <Separator layoutX="17.0" layoutY="468.0" prefHeight="3.0" prefWidth="374.0" />

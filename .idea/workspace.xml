@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a03f4c6-6795-4d18-bae1-9a57e8ba7db6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Controller.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Craig.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Craig.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Critter.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Critter.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Critter1.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Critter1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Critter2.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Critter2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Critter3.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Critter3.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Critter4.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Critter4.class" />
       <change beforePath="$PROJECT_DIR$/src/assignment5/Controller.java" afterPath="$PROJECT_DIR$/src/assignment5/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/assignment5/Craig.java" afterPath="$PROJECT_DIR$/src/assignment5/Craig.java" />
-      <change beforePath="$PROJECT_DIR$/src/assignment5/Critter.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter.java" />
-      <change beforePath="$PROJECT_DIR$/src/assignment5/Critter1.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter1.java" />
-      <change beforePath="$PROJECT_DIR$/src/assignment5/Critter2.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter2.java" />
-      <change beforePath="$PROJECT_DIR$/src/assignment5/Critter3.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter3.java" />
-      <change beforePath="$PROJECT_DIR$/src/assignment5/Critter4.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter4.java" />
       <change beforePath="$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml" afterPath="$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -163,11 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment5/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="233" column="39" lean-forward="true" selection-start-line="233" selection-start-column="39" selection-end-line="233" selection-end-column="39" />
+            <state relative-caret-position="545">
+              <caret line="259" column="0" lean-forward="true" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initialize#0;class#Controller#0" expanded="false" />
@@ -183,12 +169,14 @@
                 <element signature="method#step50Action#0;class#Controller#0" expanded="false" />
                 <element signature="method#step100Action#0;class#Controller#0" expanded="false" />
                 <element signature="method#makeAction#0;class#Controller#0" expanded="false" />
+                <element signature="initializer##0;class#Controller#0" expanded="false" />
                 <element signature="e#7568#7569#0" expanded="true" />
                 <element signature="e#7624#7625#0" expanded="true" />
-                <element signature="e#8819#8820#0" expanded="true" />
-                <element signature="e#8867#8868#0" expanded="true" />
-                <element signature="e#8941#8942#0" expanded="true" />
-                <element signature="e#8971#8972#0" expanded="true" />
+                <element signature="method#statsAction#0;class#Controller#0" expanded="false" />
+                <element signature="e#8815#8816#0" expanded="true" />
+                <element signature="e#8863#8864#0" expanded="true" />
+                <element signature="e#9259#9260#0" expanded="true" />
+                <element signature="e#9289#9290#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -214,7 +202,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SceneBuilderFile.fxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SceneBuilderFile.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="199">
@@ -258,8 +246,8 @@
         <option value="$PROJECT_DIR$/src/assignment5/Critter1.java" />
         <option value="$PROJECT_DIR$/src/assignment5/Craig.java" />
         <option value="$PROJECT_DIR$/src/assignment5/Critter.java" />
-        <option value="$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml" />
         <option value="$PROJECT_DIR$/src/assignment5/Controller.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml" />
       </list>
     </option>
   </component>
@@ -463,7 +451,7 @@
       <workItem from="1522692964276" duration="174000" />
       <workItem from="1522693224900" duration="8686000" />
       <workItem from="1522716568165" duration="696000" />
-      <workItem from="1522717546563" duration="20845000" />
+      <workItem from="1522717546563" duration="21955000" />
     </task>
     <task id="LOCAL-00001" summary="committing something">
       <created>1522693371494</created>
@@ -490,7 +478,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30401000" />
+    <option name="totallyTimeSpent" value="31511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -671,10 +659,10 @@
         <state relative-caret-position="462">
           <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="initializer##0;class#Main#0" expanded="false" />
-            <element signature="e#2200#2201#0" expanded="true" />
-            <element signature="e#2219#2220#0" expanded="true" />
+            <element signature="e#2200#2201#0" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
             <element signature="docComment;method#parse#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -699,12 +687,14 @@
             <element signature="method#step50Action#0;class#Controller#0" expanded="false" />
             <element signature="method#step100Action#0;class#Controller#0" expanded="false" />
             <element signature="method#makeAction#0;class#Controller#0" expanded="false" />
+            <element signature="initializer##0;class#Controller#0" expanded="false" />
             <element signature="e#7568#7569#0" expanded="true" />
             <element signature="e#7624#7625#0" expanded="true" />
-            <element signature="e#8819#8820#0" expanded="true" />
-            <element signature="e#8867#8868#0" expanded="true" />
-            <element signature="e#8941#8942#0" expanded="true" />
-            <element signature="e#8971#8972#0" expanded="true" />
+            <element signature="method#statsAction#0;class#Controller#0" expanded="false" />
+            <element signature="e#8815#8816#0" expanded="true" />
+            <element signature="e#8863#8864#0" expanded="true" />
+            <element signature="e#9259#9260#0" expanded="true" />
+            <element signature="e#9289#9290#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -847,10 +837,10 @@
         <state relative-caret-position="462">
           <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="initializer##0;class#Main#0" expanded="false" />
-            <element signature="e#2200#2201#0" expanded="true" />
-            <element signature="e#2219#2220#0" expanded="true" />
+            <element signature="e#2200#2201#0" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
             <element signature="docComment;method#parse#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -886,12 +876,14 @@
             <element signature="method#step50Action#0;class#Controller#0" expanded="false" />
             <element signature="method#step100Action#0;class#Controller#0" expanded="false" />
             <element signature="method#makeAction#0;class#Controller#0" expanded="false" />
+            <element signature="initializer##0;class#Controller#0" expanded="false" />
             <element signature="e#7568#7569#0" expanded="true" />
             <element signature="e#7624#7625#0" expanded="true" />
-            <element signature="e#8819#8820#0" expanded="true" />
-            <element signature="e#8867#8868#0" expanded="true" />
-            <element signature="e#8941#8942#0" expanded="true" />
-            <element signature="e#8971#8972#0" expanded="true" />
+            <element signature="method#statsAction#0;class#Controller#0" expanded="false" />
+            <element signature="e#8815#8816#0" expanded="true" />
+            <element signature="e#8863#8864#0" expanded="true" />
+            <element signature="e#9259#9260#0" expanded="true" />
+            <element signature="e#9289#9290#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -917,10 +909,10 @@
         <state relative-caret-position="506">
           <caret line="175" column="17" lean-forward="true" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="initializer##0;class#Main#0" expanded="false" />
-            <element signature="e#2200#2201#0" expanded="true" />
-            <element signature="e#2219#2220#0" expanded="true" />
+            <element signature="e#2200#2201#0" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
             <element signature="docComment;method#parse#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -1064,21 +1056,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="233" column="39" lean-forward="true" selection-start-line="233" selection-start-column="39" selection-end-line="233" selection-end-column="39" />
+        <state relative-caret-position="545">
+          <caret line="259" column="0" lean-forward="true" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initialize#0;class#Controller#0" expanded="false" />
@@ -1094,14 +1075,27 @@
             <element signature="method#step50Action#0;class#Controller#0" expanded="false" />
             <element signature="method#step100Action#0;class#Controller#0" expanded="false" />
             <element signature="method#makeAction#0;class#Controller#0" expanded="false" />
+            <element signature="initializer##0;class#Controller#0" expanded="false" />
             <element signature="e#7568#7569#0" expanded="true" />
             <element signature="e#7624#7625#0" expanded="true" />
-            <element signature="e#8819#8820#0" expanded="true" />
-            <element signature="e#8867#8868#0" expanded="true" />
-            <element signature="e#8941#8942#0" expanded="true" />
-            <element signature="e#8971#8972#0" expanded="true" />
+            <element signature="method#statsAction#0;class#Controller#0" expanded="false" />
+            <element signature="e#8815#8816#0" expanded="true" />
+            <element signature="e#8863#8864#0" expanded="true" />
+            <element signature="e#9259#9260#0" expanded="true" />
+            <element signature="e#9289#9290#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
   </component>

@@ -216,9 +216,9 @@ public class Controller {
     @FXML
     private void statsAction(ActionEvent ae) {
         String critterType = getStats(ae);
-        String stats = "";
+        String stats;
         if (critterType == null) {
-            System.out.println("Select a valid critter type");
+            stats_label.setText("Select a valid critter type");
             return;
         }
         try {
@@ -240,6 +240,24 @@ public class Controller {
     @FXML
     private String getStats(ActionEvent ae) {
         return stats_comboBox.getValue();
+    }
+
+    @FXML
+    private void animStart(ActionEvent ae) {
+        disableAll();
+        animStop_btn.setDisable(false);
+        // Run the world at time given by slider
+    }
+
+    @FXML
+    private void animStop(ActionEvent ae) {
+        enableAll();
+
+    }
+
+    @FXML
+    private void updateSlider(ActionEvent ae) {
+
     }
 
     // Quit button
