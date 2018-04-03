@@ -3,26 +3,87 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
+<AnchorPane prefHeight="560.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
    <children>
-      <ButtonBar layoutX="14.0" layoutY="58.0" prefHeight="77.0" prefWidth="386.0">
+      <ButtonBar layoutX="6.0" layoutY="58.0" prefHeight="77.0" prefWidth="386.0">
         <buttons>
-            <TextField promptText="Width" />
-            <TextField minWidth="50.0" prefHeight="31.0" promptText="Height" />
+            <TextField prefHeight="30.0" promptText="Width" />
+            <TextField minWidth="50.0" prefHeight="30.0" promptText="Height" />
           <Button fx:id="create_btn" mnemonicParsing="false" prefHeight="31.0" text="Create World!" />
         </buttons>
       </ButtonBar>
-      <Separator layoutX="14.0" layoutY="134.0" prefHeight="0.0" prefWidth="400.0" />
-      <AnchorPane layoutX="15.0" layoutY="137.0" prefHeight="145.0" prefWidth="400.0">
+      <Separator layoutX="20.0" layoutY="134.0" prefHeight="0.0" prefWidth="374.0" />
+      <AnchorPane layoutX="3.0" layoutY="178.0" prefHeight="116.0" prefWidth="410.0">
          <children>
-            <ComboBox fx:id="types_of_critters" layoutX="14.0" layoutY="15.0" onAction="#getCritters" prefHeight="31.0" prefWidth="174.0" promptText="Select a Critter" />
+            <ComboBox fx:id="types_of_critters" editable="true" layoutX="14.0" layoutY="15.0" onAction="#getCritters" prefHeight="31.0" prefWidth="174.0" promptText="Select a Critter" />
             <TextField layoutX="210.0" layoutY="15.0" prefHeight="31.0" prefWidth="77.0" promptText="Quantity" />
             <Button fx:id="make_btn" layoutX="306.0" layoutY="15.0" mnemonicParsing="false" onAction="#makeAction" prefHeight="31.0" prefWidth="80.0" text="Make!" />
+            <Button fx:id="seed_btn" layoutX="103.0" layoutY="57.0" mnemonicParsing="false" onAction="#randomSeed" prefHeight="31.0" prefWidth="204.0" text="Create Random World Seed" />
+            <Separator layoutX="18.0" layoutY="101.0" prefHeight="3.0" prefWidth="374.0" />
          </children>
       </AnchorPane>
+      <Label layoutX="88.0" layoutY="23.0" text="Critter World Controls" textFill="#288328" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="151.0" text="Make a New Critter" textFill="#2800c6">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="208.0" layoutY="294.0" orientation="VERTICAL" prefHeight="162.0" prefWidth="0.0" />
+      <AnchorPane layoutX="211.0" layoutY="294.0" prefHeight="175.0" prefWidth="192.0">
+         <children>
+            <Label layoutX="56.0" layoutY="4.0" prefHeight="25.0" prefWidth="80.0" text="Animation" textFill="#e18c03">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Slider layoutX="19.0" layoutY="48.0" prefHeight="31.0" prefWidth="154.0">
+               <tooltip>
+                  <Tooltip text="Slide the Number of Steps" />
+               </tooltip>
+            </Slider>
+            <Button layoutX="18.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Start" />
+            <Button layoutX="103.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Stop" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="294.0" prefHeight="181.0" prefWidth="192.0">
+         <children>
+            <Label layoutX="9.0" layoutY="1.0" prefHeight="27.0" prefWidth="174.0" text="Step Through The World" textFill="#d30202">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="step1_btn" layoutX="9.0" layoutY="40.0" mnemonicParsing="false" onAction="#stepAction" prefHeight="31.0" prefWidth="79.0" text="Step 1" />
+            <Button fx:id="step5_btn" layoutX="100.0" layoutY="41.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Step 5" />
+            <Button fx:id="step50_btn" layoutX="9.0" layoutY="82.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Step 50" />
+            <Button fx:id="step100_btn" layoutX="100.0" layoutY="83.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Step 100" />
+            <Button fx:id="stepNum_btn" layoutX="9.0" layoutY="126.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Step" />
+            <TextField layoutX="96.0" layoutY="127.0" prefHeight="31.0" prefWidth="88.0" promptText="# of Steps" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="11.0" layoutY="476.0" prefHeight="60.0" prefWidth="386.0">
+         <children>
+            <Label layoutX="55.0" layoutY="2.0" prefHeight="25.0" prefWidth="71.0" text="Statistics:" textFill="#740094">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="133.0" layoutY="-1.0" prefHeight="31.0" prefWidth="154.0" promptText="Select a Critter" />
+            <Button layoutX="297.0" layoutY="-1.0" mnemonicParsing="false" text="Run!" />
+            <Label layoutX="19.0" layoutY="36.0" prefHeight="21.0" prefWidth="357.0" text="PUT STATS HERE" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="17.0" layoutY="468.0" prefHeight="3.0" prefWidth="374.0" />
    </children>
 </AnchorPane>

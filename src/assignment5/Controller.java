@@ -12,18 +12,23 @@ public class Controller {
         Critter.displayWorld();
     }
 
-    public void testButton(ActionEvent ae) {
-        System.out.println("test");
-    }
-
+    // One standard world time step on the step button
     public void stepAction(ActionEvent ae) {
         Critter.worldTimeStep();
     }
 
+    // For the button "make"
+    // Use with the critter returned from getCritters and the quantity from the quantity text field
     public void makeAction(ActionEvent ae) {
 
     }
 
+    // random seed for the world
+    public void randomSeed(ActionEvent ae) {
+        Critter.setSeed(Critter.getRandomInt(100));
+    }
+
+    // For the dropdown menu when making a critter
     public void getCritters(ActionEvent ae) {
 
     }

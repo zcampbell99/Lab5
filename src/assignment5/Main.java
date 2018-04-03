@@ -37,8 +37,8 @@ import javafx.scene.control.Button;
  * May not use 'test' argument without specifying input file.
  */
 public class Main extends Application {
-	private static final int width = 400;
-	private static final int height = 500;
+	private static final int width = 415;
+	private static final int height = 560;
 	private GraphicsContext gc;
 	private ColorPicker colorPicker;
 	private Color color = Color.BLACK;
