@@ -80,12 +80,12 @@ public class Critter4 extends Critter {
         }
     }
 
-    public static String runStats(java.util.List<Critter> critter4) {
+    public static String runStats2(java.util.List<Critter> critter4) {
         return "There are " + critter4.size() + " Critter4s \n" + "Critter4s have traveled a distance of " + distanceTravelled + " spaces";
     }
 
-//    public static void runStats(java.util.List<Critter> critter4) {
-//        System.out.println("There are " + critter4.size() + " Critter4s");
-//        System.out.println("Critter4s have traveled a distance of " + distanceTravelled + " spaces");
-//    }
+    public static void runStats(java.util.List<Critter> critter4) {
+        System.out.println("There are " + critter4.size() + " Critter4s");
+        System.out.println("Critter4s have traveled a distance of " + distanceTravelled + " spaces");
+    }
 }

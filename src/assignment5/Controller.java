@@ -4,10 +4,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -36,6 +33,7 @@ public class Controller {
     @FXML private Button runStats_btn;
     @FXML private Button make_btn;
     @FXML private Slider anim_slider;
+    @FXML private Label stats_label;
 
     // Runs on startup
     public void initialize() {
@@ -227,12 +225,13 @@ public class Controller {
             List<Critter> listOfCrits = Critter.getInstances(critterType);
             if(listOfCrits.size() != 0) {   //if the critter class already exists then runStats
                 Class<?> critter_class = listOfCrits.get(0).getClass();
-                Method runs = critter_class.getMethod("runStats", java.util.List.class);
+                Method runs = critter_class.getMethod("runStats2", java.util.List.class);
                 stats = (String)runs.invoke(null,listOfCrits);
             } else {
                 stats = "No critters of type " + critterType + " exist.";
             }
             /*Update UI with the stats info*/
+            stats_label.setText(stats);
         } catch (InvalidCritterException | NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoClassDefFoundError e) {
             System.out.println("error processing: " + critterType);
         }
