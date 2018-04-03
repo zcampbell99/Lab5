@@ -49,13 +49,13 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Slider layoutX="19.0" layoutY="48.0" prefHeight="31.0" prefWidth="154.0">
+            <Slider fx:id="anim_slider" layoutX="19.0" layoutY="48.0" prefHeight="31.0" prefWidth="154.0">
                <tooltip>
                   <Tooltip text="Slide the Number of Steps" />
                </tooltip>
             </Slider>
-            <Button layoutX="18.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Start" />
-            <Button layoutX="103.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Stop" />
+            <Button fx:id="animStart_btn" layoutX="18.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Start" />
+            <Button fx:id="animStop_btn" layoutX="103.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Stop" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="294.0" prefHeight="181.0" prefWidth="192.0">
@@ -80,8 +80,8 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <ComboBox layoutX="133.0" layoutY="-1.0" prefHeight="31.0" prefWidth="154.0" promptText="Select a Critter" />
-            <Button layoutX="297.0" layoutY="-1.0" mnemonicParsing="false" text="Run!" />
+            <ComboBox fx:id="stats_comboBox" layoutX="133.0" layoutY="-1.0" prefHeight="31.0" prefWidth="154.0" promptText="Select a Critter" />
+            <Button fx:id="runStats_btn" layoutX="297.0" layoutY="-1.0" mnemonicParsing="false" text="Run!" />
             <Label layoutX="19.0" layoutY="36.0" prefHeight="21.0" prefWidth="357.0" text="PUT STATS HERE" />
          </children>
       </AnchorPane>

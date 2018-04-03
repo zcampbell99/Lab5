@@ -68,9 +68,10 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
+
 		Parent root = FXMLLoader.load(getClass().getResource("SceneBuilderFile.fxml"));
 		stage.setTitle("CritterWorld Controls");
-		Controller.disableAll();
+
 		Scene scene = new Scene(root, width, height);
 		stage.setScene(scene);
 		stage.show();

@@ -30,13 +30,12 @@ public class Controller {
     @FXML private Button animStart_btn;
     @FXML private Button animStop_btn;
     @FXML private Button runStats_btn;
+    @FXML private Button make_btn;
     @FXML private Slider anim_slider;
 
-
-    // NOT DONE YET
-    @FXML
-    private void makeWorld(ActionEvent ae) {
-        types_of_critters_text.getItems().addAll("Craig", "Algae", "AlgaephobicCritter", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
+    // Runs on startup
+    public void initialize() {
+        types_of_critters_text.getItems().addAll("Algae", "AlgaephobicCritter", "Craig", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
         width_field.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue,
@@ -55,6 +54,30 @@ public class Controller {
                 }
             }
         });
+        makeNum_field.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    makeNum_field.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
+        stepNum_field.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    stepNum_field.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
+        disableAll();
+    }
+
+    // NOT DONE YET
+    @FXML
+    private void makeWorld(ActionEvent ae) {
         width = Integer.parseInt(width_field.getText());
         height = Integer.parseInt(height_field.getText());
         System.out.println("Width = " + width);
@@ -65,20 +88,12 @@ public class Controller {
         width_field.setDisable(true);
         height_field.setDisable(true);
         create_btn.setDisable(true);
+        enableAll();
     }
 
     // Step the number of times defined in the text field
     @FXML
     private void stepNumAction(ActionEvent ae) {
-        stepNum_field.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue,
-                                String newValue) {
-                if (!newValue.matches("\\d*")) {
-                    stepNum_field.setText(newValue.replaceAll("[^\\d]", ""));
-                }
-            }
-        });
         numSteps = Integer.parseInt(stepNum_field.getText());
         for (int i = 0; i < numSteps; i++) {
             Critter.worldTimeStep();
@@ -86,7 +101,29 @@ public class Controller {
         numSteps = 0;
     }
 
-    protected void disableAll() {
+    // Enable components after world is created
+    private void enableAll() {
+        stepNum_field.setDisable(false);
+        make_btn.setDisable(false);
+        step1_btn.setDisable(false);
+        step5_btn.setDisable(false);
+        step50_btn.setDisable(false);
+        step100_btn.setDisable(false);
+        seed_btn.setDisable(false);
+        stepNum_btn.setDisable(false);
+        types_of_critters_text.setDisable(false);
+        makeNum_field.setDisable(false);
+        anim_slider.setDisable(false);
+        animStart_btn.setDisable(false);
+        animStop_btn.setDisable(false);
+        stats_comboBox.setDisable(false);
+        runStats_btn.setDisable(false);
+    }
+
+    // Disable certain components at startup
+    private void disableAll() {
+        stepNum_field.setDisable(true);
+        make_btn.setDisable(true);
         step1_btn.setDisable(true);
         step5_btn.setDisable(true);
         step50_btn.setDisable(true);
@@ -133,18 +170,17 @@ public class Controller {
     @FXML
     private void makeAction(ActionEvent ae) {
         String critterType = "";
-        makeNum_field.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue,
-                                String newValue) {
-                if (!newValue.matches("\\d*")) {
-                    makeNum_field.setText(newValue.replaceAll("[^\\d]", ""));
-                }
-            }
-        });
-        quantityMake = Integer.parseInt(makeNum_field.getText());
+        if (makeNum_field.getText().equals("")) {
+            quantityMake = 0;
+        } else {
+            quantityMake = Integer.parseInt(makeNum_field.getText());
+        }
         try {
             critterType = getCritters(ae);
+            if (critterType == null) {
+                System.out.println("Please enter a valid critter type");
+                return;
+            }
             if (makeNum_field.getText().length() != 0) {
                 for (int i = 0; i < quantityMake; i++) {
                     Critter.makeCritter(critterType);
@@ -170,17 +206,7 @@ public class Controller {
 
     // For the dropdown menu when making a critter
     @FXML
-    private String getCritters(ActionEvent ae) throws InvalidCritterException {
-        try {
-            Class<?> critter = Class.forName(myPackage + ".Critter");
-            Class<?> critter_class = Class.forName(myPackage + "." + types_of_critters_text.getEditor().getText()/* entered text? */);
-            if (critter.isAssignableFrom(critter_class)) {
-                types_of_critters_text.setValue(types_of_critters_text.getEditor().getText());
-            } else
-                throw new InvalidCritterException(types_of_critters_text.getEditor().getText());
-        } catch (ClassNotFoundException | NoClassDefFoundError e) {
-            throw new InvalidCritterException(types_of_critters_text.getEditor().getText());
-        }
+    private String getCritters(ActionEvent ae){
         return types_of_critters_text.getValue();
     }
 
