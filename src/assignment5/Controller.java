@@ -20,7 +20,6 @@ public class Controller {
     @FXML private TextField stepNum_field;
     @FXML private TextField makeNum_field;
     @FXML private ComboBox<String> types_of_critters_text;
-    @FXML private ComboBox<String> stats_comboBox;
     @FXML private Button create_btn;
     @FXML private Button step1_btn;
     @FXML private Button step5_btn;
@@ -30,15 +29,12 @@ public class Controller {
     @FXML private Button seed_btn;
     @FXML private Button animStart_btn;
     @FXML private Button animStop_btn;
-    @FXML private Button runStats_btn;
     @FXML private Button make_btn;
     @FXML private Slider anim_slider;
-    @FXML private Label stats_label;
 
     // Runs on startup
     public void initialize() {
         types_of_critters_text.getItems().addAll("Algae", "AlgaephobicCritter", "Craig", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
-        stats_comboBox.getItems().addAll("Algae", "AlgaephobicCritter", "Craig", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
         width_field.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue,
@@ -119,8 +115,6 @@ public class Controller {
         anim_slider.setDisable(false);
         animStart_btn.setDisable(false);
         animStop_btn.setDisable(false);
-        stats_comboBox.setDisable(false);
-        runStats_btn.setDisable(false);
     }
 
     // Disable certain components at startup
@@ -138,8 +132,6 @@ public class Controller {
         anim_slider.setDisable(true);
         animStart_btn.setDisable(true);
         animStop_btn.setDisable(true);
-        stats_comboBox.setDisable(true);
-        runStats_btn.setDisable(true);
     }
 
     @FXML
@@ -215,10 +207,10 @@ public class Controller {
 
     @FXML
     private void statsAction(ActionEvent ae) {
-        String critterType = getStats(ae);
+        String critterType = ""; //getStats(ae);
         String stats;
         if (critterType == null) {
-            stats_label.setText("Select a valid critter type");
+            //stats_label.setText("Select a valid critter type");
             return;
         }
         try {
@@ -231,16 +223,16 @@ public class Controller {
                 stats = "No critters of type " + critterType + " exist.";
             }
             /*Update UI with the stats info*/
-            stats_label.setText(stats);
+            //stats_label.setText(stats);
         } catch (InvalidCritterException | NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoClassDefFoundError e) {
             System.out.println("error processing: " + critterType);
         }
     }
 
-    @FXML
-    private String getStats(ActionEvent ae) {
-        return stats_comboBox.getValue();
-    }
+//    @FXML
+//    private String getStats(ActionEvent ae) {
+//        return stats_comboBox.getValue();
+//    }
 
     @FXML
     private void animStart(ActionEvent ae) {

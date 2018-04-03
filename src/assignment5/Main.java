@@ -37,11 +37,10 @@ import javafx.scene.control.Button;
  */
 public class Main extends Application {
 	private static final int width = 415;
-	private static final int height = 560;
+	private static final int height = 650;
 	private GraphicsContext gc;
 	private ColorPicker colorPicker;
 	private Color color = Color.BLACK;
-	private Button clrButton;
 	BorderPane pane;
 
 

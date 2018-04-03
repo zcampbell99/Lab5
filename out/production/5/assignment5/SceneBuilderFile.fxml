@@ -4,6 +4,8 @@
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
@@ -11,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="560.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
+<AnchorPane prefHeight="650.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
    <children>
       <ButtonBar layoutX="6.0" layoutY="58.0" prefHeight="77.0" prefWidth="386.0">
         <buttons>
@@ -49,13 +51,13 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Slider fx:id="anim_slider" layoutX="19.0" layoutY="48.0" prefHeight="31.0" prefWidth="154.0">
+            <Slider fx:id="anim_slider" layoutX="19.0" layoutY="36.0" prefHeight="31.0" prefWidth="154.0" showTickLabels="true" showTickMarks="true">
                <tooltip>
-                  <Tooltip text="Slide the Number of Steps" />
+                  <Tooltip text="Slide the Number of Steps per Second" />
                </tooltip>
             </Slider>
-            <Button fx:id="animStart_btn" layoutX="18.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Start" />
-            <Button fx:id="animStop_btn" layoutX="103.0" layoutY="91.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Stop" />
+            <Button fx:id="animStart_btn" layoutX="18.0" layoutY="91.0" mnemonicParsing="false" onAction="#animStart" prefHeight="31.0" prefWidth="71.0" text="Start" />
+            <Button fx:id="animStop_btn" layoutX="103.0" layoutY="91.0" mnemonicParsing="false" onAction="#animStop" prefHeight="31.0" prefWidth="71.0" text="Stop" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="294.0" prefHeight="181.0" prefWidth="192.0">
@@ -73,18 +75,17 @@
             <TextField fx:id="stepNum_field" layoutX="96.0" layoutY="127.0" onAction="#stepNumAction" prefHeight="31.0" prefWidth="88.0" promptText="# of Steps" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="11.0" layoutY="476.0" prefHeight="60.0" prefWidth="386.0">
-         <children>
-            <Label layoutX="55.0" layoutY="2.0" prefHeight="25.0" prefWidth="71.0" text="Statistics:" textFill="#740094">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <ComboBox fx:id="stats_comboBox" layoutX="133.0" layoutY="-1.0" onAction="#getStats" prefHeight="31.0" prefWidth="154.0" promptText="Select a Critter" />
-            <Button fx:id="runStats_btn" layoutX="297.0" layoutY="-1.0" mnemonicParsing="false" onAction="#statsAction" text="Run!" />
-            <Label fx:id="stats_label" alignment="CENTER" layoutX="9.0" layoutY="40.0" prefHeight="31.0" prefWidth="386.0" textAlignment="CENTER" wrapText="true" />
-         </children>
-      </AnchorPane>
       <Separator layoutX="17.0" layoutY="468.0" prefHeight="3.0" prefWidth="374.0" />
+      <Label layoutX="171.0" layoutY="475.0" prefHeight="25.0" prefWidth="71.0" text="Statistics:" textFill="#740094">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <MenuButton layoutX="14.0" layoutY="500.0" mnemonicParsing="false" text="MenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
    </children>
 </AnchorPane>
