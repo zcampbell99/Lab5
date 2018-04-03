@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1a03f4c6-6795-4d18-bae1-9a57e8ba7db6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Controller.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/SceneBuilderFile.fxml" afterPath="$PROJECT_DIR$/out/production/5/assignment5/SceneBuilderFile.fxml" />
       <change beforePath="$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml" afterPath="$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -122,7 +120,7 @@
       <file leaf-file-name="Critter3.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment5/Critter3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="483">
               <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
               <folding>
                 <element signature="e#582#583#0" expanded="true" />
@@ -156,7 +154,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment5/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="462">
               <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -189,7 +187,7 @@
       <file leaf-file-name="SceneBuilderFile.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="588">
+            <state relative-caret-position="735">
               <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
@@ -259,9 +257,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,7 +281,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -432,7 +430,8 @@
       <updated>1522692962230</updated>
       <workItem from="1522692964276" duration="174000" />
       <workItem from="1522693224900" duration="8686000" />
-      <workItem from="1522716568165" duration="404000" />
+      <workItem from="1522716568165" duration="696000" />
+      <workItem from="1522717546563" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary="committing something">
       <created>1522693371494</created>
@@ -441,11 +440,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522693371494</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="I hate scene builder">
+      <created>1522717002042</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1522717002042</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9264000" />
+    <option name="totallyTimeSpent" value="9651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -488,13 +494,178 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="committing something" />
-    <option name="LAST_COMMIT_MESSAGE" value="committing something" />
+    <MESSAGE value="I hate scene builder" />
+    <option name="LAST_COMMIT_MESSAGE" value="I hate scene builder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="initializer##0;class#Critter#0" expanded="false" />
+            <element signature="e#2369#2370#0" expanded="true" />
+            <element signature="e#2400#2401#0" expanded="true" />
+            <element signature="e#2446#2447#0" expanded="true" />
+            <element signature="e#2490#2491#0" expanded="true" />
+            <element signature="docComment;method#setEnergy#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#updateLoc#0;class#Critter#0" expanded="false" />
+            <element signature="method#updateLoc#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#move#0;class#Critter#0" expanded="false" />
+            <element signature="method#move#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#addToGrid#0;class#Critter#0" expanded="false" />
+            <element signature="method#addToGrid#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#runStats#0;class#Critter#0" expanded="false" />
+            <element signature="method#runStats#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;class#TestCritter#0;class#Critter#0" expanded="false" />
+            <element signature="class#TestCritter#0;class#Critter#0" expanded="false" />
+            <element signature="e#12731#12732#0" expanded="true" />
+            <element signature="e#12760#12761#0" expanded="true" />
+            <element signature="e#12792#12793#0" expanded="true" />
+            <element signature="e#12821#12822#0" expanded="true" />
+            <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="method#worldTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#encounters#0;class#Critter#0" expanded="false" />
+            <element signature="method#encounters#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#isAlive#0;class#Critter#0" expanded="false" />
+            <element signature="method#isAlive#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#updateRestEnergy#0;class#Critter#0" expanded="false" />
+            <element signature="method#updateRestEnergy#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#clearDead#0;class#Critter#0" expanded="false" />
+            <element signature="method#clearDead#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;class#Point#0;class#Critter#0" expanded="false" />
+            <element signature="class#Point#0;class#Critter#0" expanded="false" />
+            <element signature="e#19069#19070#0" expanded="true" />
+            <element signature="e#19102#19103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Craig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+          <folding>
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding>
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="initializer##0;class#Main#0" expanded="false" />
+            <element signature="e#2238#2239#0" expanded="true" />
+            <element signature="e#2257#2258#0" expanded="true" />
+            <element signature="docComment;method#parse#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/Critter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -663,7 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -671,7 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-350">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,7 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -794,7 +962,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/Critter3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
+        <state relative-caret-position="483">
           <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
             <element signature="e#582#583#0" expanded="true" />
@@ -809,7 +977,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="462">
           <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -838,7 +1006,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="588">
+        <state relative-caret-position="735">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
