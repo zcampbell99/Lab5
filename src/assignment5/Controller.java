@@ -14,9 +14,14 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Iterator;
 import java.util.List;
 
 public class Controller {
@@ -46,22 +51,25 @@ public class Controller {
     public void initialize() {
         try {
             Class<?> critter = Class.forName(myPackage + ".Critter");
-            Class[] critterTypes = Critter.class.getClasses();
-            final ObservableList<String> strings = FXCollections.observableArrayList();
+            Class[] critterTypes = getClasses(myPackage);
+            System.out.println("crittertypes size = " + critterTypes.length);
             for (Class c : critterTypes) {
-                strings.add(c.getName());
+                System.out.println("c = " + c.toString());
+                if (critter.isAssignableFrom(c)) {
+                    types_of_critters_text.getItems().addAll(c.getClass().toString());
+                    //checkListView.getCheckModel().getCheckedItems().add(c.getName());
+                }
             }
-            checkListView = new CheckListView<>(strings);
             checkListView.getCheckModel().getCheckedItems().addListener(new ListChangeListener<String>() {
                 public void onChanged(ListChangeListener.Change<? extends String> c) {
                     System.out.println(checkListView.getCheckModel().getCheckedItems());
                 }
             });
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
 
-        types_of_critters_text.getItems().addAll("Algae", "AlgaephobicCritter", "Craig", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
+        //types_of_critters_text.getItems().addAll("Algae", "AlgaephobicCritter", "Craig", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
         width_field.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue,
@@ -99,6 +107,40 @@ public class Controller {
             }
         });
         disableAll();
+    }
+
+    private static Class[] getClasses(String packageName) throws ClassNotFoundException, IOException {
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        assert classLoader != null;
+        String path = packageName.replace('.', '/');
+        Enumeration resources = classLoader.getResources(path);
+        List dirs = new ArrayList();
+        while (resources.hasMoreElements()) {
+            URL resource = (URL)resources.nextElement();
+            dirs.add(new File(resource.getFile()));
+        }
+        ArrayList classes = new ArrayList();
+        for (Object directory : dirs) {
+            classes.addAll(findClasses((File)directory, packageName));
+        }
+        return (Class[])classes.toArray(new Class[classes.size()]);
+    }
+
+    private static List findClasses(File directory, String packageName) throws ClassNotFoundException {
+        List classes = new ArrayList();
+        if (!directory.exists()) {
+            return classes;
+        }
+        File[] files = directory.listFiles();
+        for (File file : files) {
+            if (file.isDirectory()) {
+                assert !file.getName().contains(".");
+                classes.addAll(findClasses(file, packageName + "." + file.getName()));
+            } else if (file.getName().endsWith(".class")) {
+                classes.add(Class.forName(packageName + '.' + file.getName().substring(0, file.getName().length() - 6)));
+            }
+        }
+        return classes;
     }
 
     // NOT DONE YET
