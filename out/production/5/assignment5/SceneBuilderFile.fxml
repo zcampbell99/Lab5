@@ -4,16 +4,15 @@
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckListView?>
 
-<AnchorPane prefHeight="650.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
+<AnchorPane prefHeight="650.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
    <children>
       <ButtonBar layoutX="6.0" layoutY="58.0" prefHeight="77.0" prefWidth="386.0">
         <buttons>
@@ -76,16 +75,15 @@
          </children>
       </AnchorPane>
       <Separator layoutX="17.0" layoutY="468.0" prefHeight="3.0" prefWidth="374.0" />
-      <Label layoutX="171.0" layoutY="475.0" prefHeight="25.0" prefWidth="71.0" text="Statistics:" textFill="#740094">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <MenuButton layoutX="14.0" layoutY="500.0" mnemonicParsing="false" text="MenuButton">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </MenuButton>
+      <AnchorPane layoutX="12.0" layoutY="475.0" prefHeight="175.0" prefWidth="386.0">
+         <children>
+            <Label layoutX="155.0" layoutY="5.0" prefHeight="25.0" prefWidth="71.0" text="Statistics:" textFill="#740094">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <CheckListView editable="true" layoutX="6.0" layoutY="31.0" prefHeight="133.0" prefWidth="174.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

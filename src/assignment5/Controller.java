@@ -1,11 +1,20 @@
 package assignment5;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
+import org.controlsfx.control.CheckListView;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 
+import java.io.File;
+import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
@@ -31,9 +40,27 @@ public class Controller {
     @FXML private Button animStop_btn;
     @FXML private Button make_btn;
     @FXML private Slider anim_slider;
+    @FXML private CheckListView<String> checkListView;
 
     // Runs on startup
     public void initialize() {
+        try {
+            Class<?> critter = Class.forName(myPackage + ".Critter");
+            Class[] critterTypes = Critter.class.getClasses();
+            final ObservableList<String> strings = FXCollections.observableArrayList();
+            for (Class c : critterTypes) {
+                strings.add(c.getName());
+            }
+            checkListView = new CheckListView<>(strings);
+            checkListView.getCheckModel().getCheckedItems().addListener(new ListChangeListener<String>() {
+                public void onChanged(ListChangeListener.Change<? extends String> c) {
+                    System.out.println(checkListView.getCheckModel().getCheckedItems());
+                }
+            });
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
         types_of_critters_text.getItems().addAll("Algae", "AlgaephobicCritter", "Craig", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
         width_field.textProperty().addListener(new ChangeListener<String>() {
             @Override
