@@ -3,6 +3,11 @@ package assignment5;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import org.controlsfx.control.CheckListView;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -19,10 +24,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Controller {
     private int quantityMake = 0;
@@ -47,29 +49,30 @@ public class Controller {
     @FXML private Slider anim_slider;
     @FXML private CheckListView<String> checkListView;
 
+
     // Runs on startup
     public void initialize() {
-        try {
-            Class<?> critter = Class.forName(myPackage + ".Critter");
-            Class[] critterTypes = getClasses(myPackage);
-            System.out.println("crittertypes size = " + critterTypes.length);
-            for (Class c : critterTypes) {
-                System.out.println("c = " + c.toString());
-                if (critter.isAssignableFrom(c)) {
-                    types_of_critters_text.getItems().addAll(c.getClass().toString());
-                    //checkListView.getCheckModel().getCheckedItems().add(c.getName());
-                }
-            }
-            checkListView.getCheckModel().getCheckedItems().addListener(new ListChangeListener<String>() {
-                public void onChanged(ListChangeListener.Change<? extends String> c) {
-                    System.out.println(checkListView.getCheckModel().getCheckedItems());
-                }
-            });
-        } catch (ClassNotFoundException | IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Class<?> critter = Class.forName(myPackage + ".Critter");
+//            Class[] critterTypes = getClasses(myPackage);
+//            System.out.println("crittertypes size = " + critterTypes.length);
+//            for (Class c : critterTypes) {
+//                System.out.println("c = " + c.toString());
+//                if (critter.isAssignableFrom(c)) {
+//                    types_of_critters_text.getItems().addAll(c.getClass().toString());
+//                    //checkListView.getCheckModel().getCheckedItems().add(c.getName());
+//                }
+//            }
+//            checkListView.getCheckModel().getCheckedItems().addListener(new ListChangeListener<String>() {
+//                public void onChanged(ListChangeListener.Change<? extends String> c) {
+//                    System.out.println(checkListView.getCheckModel().getCheckedItems());
+//                }
+//            });
+//        } catch (ClassNotFoundException | IOException e) {
+//            e.printStackTrace();
+//        }
 
-        //types_of_critters_text.getItems().addAll("Algae", "AlgaephobicCritter", "Craig", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
+        types_of_critters_text.getItems().addAll("Algae", "AlgaephobicCritter", "Craig", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
         width_field.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue,
@@ -145,7 +148,7 @@ public class Controller {
 
     // NOT DONE YET
     @FXML
-    private void makeWorld(ActionEvent ae) {
+    private void makeWorld(ActionEvent ae) throws IOException{
         width = Integer.parseInt(width_field.getText());
         height = Integer.parseInt(height_field.getText());
         System.out.println("Width = " + width);
@@ -157,6 +160,13 @@ public class Controller {
         height_field.setDisable(true);
         create_btn.setDisable(true);
         enableAll();
+
+        // Create the new window for the grid
+        Parent world = FXMLLoader.load(getClass().getResource("World.fxml"));
+        Stage worldStage = new Stage();
+        worldStage.setTitle("The Land of Critters");
+        worldStage.setScene(new Scene(world, Params.world_width*worldController.boxSize+25, Params.world_height*worldController.boxSize+25));
+        worldStage.show();
     }
 
     // Step the number of times defined in the text field

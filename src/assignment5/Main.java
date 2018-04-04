@@ -41,6 +41,7 @@ public class Main extends Application {
 	private GraphicsContext gc;
 	private ColorPicker colorPicker;
 	private Color color = Color.BLACK;
+	protected static Stage worldStageGlobal;
 	BorderPane pane;
 
 
@@ -74,6 +75,17 @@ public class Main extends Application {
 		Scene scene = new Scene(root, width, height);
 		stage.setScene(scene);
 		stage.show();
+
+//		Parent world = FXMLLoader.load(getClass().getResource("World.fxml"));
+//		Stage worldStage = new Stage();
+//		worldStage.setTitle("The Land of Critters");
+//		worldStage.setScene(new Scene(world, Params.world_width+200, Params.world_height+200));
+//		worldStage.hide();
+		//worldStageGlobal = worldStage;
+	}
+
+	public static void createTheWorld(Stage worldStage) {
+		worldStage.show();
 	}
 
 	/**
