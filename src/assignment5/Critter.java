@@ -46,8 +46,92 @@ public abstract class Critter {
 	static {
 		myPackage = Critter.class.getPackage().toString().split(" ")[1];
 	}
-	
-	protected final String look(int direction, boolean steps) {return "";}
+
+    /**
+     * Gets the destination for a critter's movement
+     * @param currLoc is the current location of the critter
+     * @param steps is the number of steps the critter wants to move (walk or run, 1 or 2)
+     * @param direction is the direction the critter wants to move in
+     * @return the destination point of the critter
+     */
+    public Point getNextPoint(Point currLoc, int steps, int direction){
+        Point new_pos = new Point(currLoc.x, currLoc.y);
+        switch(direction) {
+            case 0:                     // West
+                new_pos.x += steps;
+                break;
+            case 1:                     // Northwest
+                new_pos.x += steps;
+                new_pos.y -= steps;
+                break;
+            case 2:                     // North
+                new_pos.y -= steps;
+                break;
+            case 3:                     // Northeast
+                new_pos.x -= steps;
+                new_pos.y -= steps;
+                break;
+            case 4:                     // East
+                new_pos.x -= steps;
+                break;
+            case 5:                     // Southeast
+                new_pos.x -= steps;
+                new_pos.y += steps;
+                break;
+            case 6:                     // South
+                new_pos.y += steps;
+                break;
+            case 7:                     // Southwest
+                new_pos.x += steps;
+                new_pos.y += steps;
+                break;
+            default:
+                throw new IllegalArgumentException();   // If it's an invalid direction
+        }
+        if(new_pos.x >= Params.world_width)
+            new_pos.x -= Params.world_width;
+        else if (new_pos.x < 0)
+            new_pos.x += Params.world_width;
+        if(new_pos.y >= Params.world_height)
+            new_pos.y -= Params.world_height;
+        else if (new_pos.y < 0)
+            new_pos.y += Params.world_height;
+
+        return new_pos;
+    }
+
+    /**
+     * Looks to see if the spot that the critter wants to move to is occupied or not
+     * @param direction is the direction that the critter wants to move in
+     * @param steps a boolean to see if the critter is walking (false) or running (true)
+     * @return null if the destination is unoccupied or a string of the critter occupying the spot
+     */
+    protected final String look(int direction, boolean steps){
+        energy -= Params.look_energy_cost;  //critter pays look energy cost
+        Point currLoc = new Point(this.x_coord, this.y_coord);
+        if(steps == true){  //critter wants to walk or run
+            Point nextLoc = getNextPoint(currLoc, 2, direction);    //get the next location from running or walking
+            if (grid.containsKey(nextLoc)) {    //if the point is in the grid
+                LinkedList<Critter> currCritList = grid.get(nextLoc);   //finds the critter at this point
+                if (currCritList.size() >= 1) {
+                    return currCritList.get(0).toString(); //gets the first critter that was at this point to return
+                }else{
+                    return null;
+                }
+            }
+        }else{
+            Point nextLoc = getNextPoint(currLoc, 1, direction);    //get the next location from running or walking
+            if (grid.containsKey(nextLoc)) {    //if the point is in the grid
+                LinkedList<Critter> currCritList = grid.get(nextLoc);   //finds the critter at this point
+                if (currCritList.size() >= 1) {
+                    return currCritList.get(0).toString(); //gets the first critter that was at this point to return
+                }else{
+                    return null;
+                }
+            }
+        }
+        return null;
+    }
 
 	// Everything Down from here is from Project 4
 	private static LinkedList<Critter> allCritters = new LinkedList<Critter>();

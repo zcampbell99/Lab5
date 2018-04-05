@@ -65,16 +65,23 @@ public class Critter3 extends Critter {
      * Critter3 is more likely to run than walk
      * It reproduces every other step and reproduction doesn't take as much energy
      * Reproduction requires less energy than normal
+     * Avoids elephants
      */
     @Override
     public void doTimeStep() {
         if (Critter.getRandomInt(10) <= 3) {                    // More likely to run than walk
-            walk(Critter.getRandomInt(8));
+            String occupied = look(this.dir,false);            //always looks before walking
+            if(!occupied.equals("1")){                              //only moves if spot isn't occupied by an elephant
+                walk(Critter.getRandomInt(8));
+            }
         } else {
-            int temp = Params.run_energy_cost;                      // Running takes half as much energy
-            Params.run_energy_cost /= 2;
-            run(Critter.getRandomInt(8));
-            Params.run_energy_cost = temp;
+            String occupied = look(this.dir, true);             //always looks before running
+            if(!occupied.equals("1")) {                                 //only moves if spot isn't occupied by an elephant
+                int temp = Params.run_energy_cost;                      // Running takes half as much energy
+                Params.run_energy_cost /= 2;
+                run(Critter.getRandomInt(8));
+                Params.run_energy_cost = temp;
+            }
         }
         if (this.getEnergy() >= 25 && !didRep) {
             didRep = true;
