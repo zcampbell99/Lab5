@@ -6,13 +6,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import org.controlsfx.control.CheckListView?>
 
-<AnchorPane prefHeight="650.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
+<AnchorPane prefHeight="650.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment5.Controller">
    <children>
       <ButtonBar layoutX="6.0" layoutY="58.0" prefHeight="77.0" prefWidth="386.0">
         <buttons>
@@ -28,8 +28,9 @@
             <ComboBox fx:id="types_of_critters_text" editable="true" layoutX="14.0" layoutY="15.0" onAction="#getCritters" prefHeight="31.0" prefWidth="174.0" promptText="Select a Critter" />
             <TextField fx:id="makeNum_field" layoutX="210.0" layoutY="15.0" onAction="#makeAction" prefHeight="31.0" prefWidth="77.0" promptText="Quantity" />
             <Button fx:id="make_btn" layoutX="306.0" layoutY="15.0" mnemonicParsing="false" onAction="#makeAction" prefHeight="31.0" prefWidth="80.0" text="Make!" />
-            <Button fx:id="seed_btn" layoutX="103.0" layoutY="57.0" mnemonicParsing="false" onAction="#randomSeed" prefHeight="21.0" prefWidth="204.0" text="Create Random World Seed" />
-            <Separator layoutX="18.0" layoutY="101.0" prefHeight="3.0" prefWidth="374.0" />
+            <Button fx:id="seed_btn" layoutX="103.0" layoutY="73.0" mnemonicParsing="false" onAction="#randomSeed" prefHeight="21.0" prefWidth="204.0" text="Create Random World Seed" />
+            <Separator layoutX="18.0" layoutY="115.0" prefHeight="3.0" prefWidth="374.0" />
+            <Label fx:id="error_label" layoutX="14.0" layoutY="48.0" prefHeight="25.0" prefWidth="374.0" textFill="RED" />
          </children>
       </AnchorPane>
       <Label layoutX="88.0" layoutY="23.0" text="Critter World Controls" textFill="#288328" underline="true">
@@ -42,26 +43,26 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Separator layoutX="208.0" layoutY="294.0" orientation="VERTICAL" prefHeight="162.0" prefWidth="0.0" />
-      <AnchorPane layoutX="211.0" layoutY="294.0" prefHeight="175.0" prefWidth="192.0">
+      <Separator layoutX="208.0" layoutY="304.0" orientation="VERTICAL" prefHeight="162.0" prefWidth="0.0" />
+      <AnchorPane layoutX="211.0" layoutY="298.0" prefHeight="175.0" prefWidth="192.0">
          <children>
-            <Label layoutX="56.0" layoutY="4.0" prefHeight="25.0" prefWidth="80.0" text="Animation" textFill="#e18c03">
+            <Label layoutX="56.0" layoutY="8.0" prefHeight="25.0" prefWidth="80.0" text="Animation" textFill="#e18c03">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Slider fx:id="anim_slider" layoutX="19.0" layoutY="36.0" prefHeight="31.0" prefWidth="154.0" showTickLabels="true" showTickMarks="true">
+            <Slider fx:id="anim_slider" layoutX="19.0" layoutY="43.0" prefHeight="31.0" prefWidth="154.0" showTickLabels="true" showTickMarks="true">
                <tooltip>
                   <Tooltip text="Slide the Number of Steps per Second" />
                </tooltip>
             </Slider>
-            <Button fx:id="animStart_btn" layoutX="18.0" layoutY="91.0" mnemonicParsing="false" onAction="#animStart" prefHeight="31.0" prefWidth="71.0" text="Start" />
-            <Button fx:id="animStop_btn" layoutX="103.0" layoutY="91.0" mnemonicParsing="false" onAction="#animStop" prefHeight="31.0" prefWidth="71.0" text="Stop" />
+            <Button fx:id="animStart_btn" layoutX="18.0" layoutY="100.0" mnemonicParsing="false" onAction="#animStart" prefHeight="31.0" prefWidth="71.0" text="Start" />
+            <Button fx:id="animStop_btn" layoutX="103.0" layoutY="100.0" mnemonicParsing="false" onAction="#animStop" prefHeight="31.0" prefWidth="71.0" text="Stop" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="14.0" layoutY="294.0" prefHeight="181.0" prefWidth="192.0">
+      <AnchorPane layoutX="14.0" layoutY="304.0" prefHeight="181.0" prefWidth="192.0">
          <children>
-            <Label layoutX="9.0" layoutY="1.0" prefHeight="27.0" prefWidth="174.0" text="Step Through The World" textFill="#d30202">
+            <Label layoutX="9.0" layoutY="1.0" prefHeight="27.0" prefWidth="174.0" text="Step Through The World" textFill="#ae0101">
                <font>
                   <Font size="16.0" />
                </font>
@@ -74,7 +75,7 @@
             <TextField fx:id="stepNum_field" layoutX="96.0" layoutY="127.0" onAction="#stepNumAction" prefHeight="31.0" prefWidth="88.0" promptText="# of Steps" />
          </children>
       </AnchorPane>
-      <Separator layoutX="17.0" layoutY="468.0" prefHeight="3.0" prefWidth="374.0" />
+      <Separator layoutX="18.0" layoutY="474.0" prefHeight="3.0" prefWidth="374.0" />
       <AnchorPane layoutX="12.0" layoutY="475.0" prefHeight="175.0" prefWidth="386.0">
          <children>
             <Label layoutX="155.0" layoutY="5.0" prefHeight="25.0" prefWidth="71.0" text="Statistics:" textFill="#740094">
@@ -82,7 +83,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <CheckListView fx:id="checkListView" editable="true" layoutX="6.0" layoutY="31.0" prefHeight="133.0" prefWidth="174.0" />
+            <TextArea layoutX="6.0" layoutY="29.0" prefHeight="136.0" prefWidth="374.0" />
          </children>
       </AnchorPane>
    </children>

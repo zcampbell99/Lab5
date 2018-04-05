@@ -21,7 +21,7 @@ public abstract class Critter {
 		DIAMOND,
 		STAR,
 		FOURPOINT,
-		SQUIGGLE,
+		BOLT,
 		PENTAGON
 	}
 	
@@ -675,7 +675,7 @@ public abstract class Critter {
 				return c;
 			case DIAMOND:				// Algaephobic
 				Polygon p2 = new Polygon();
-				p2.getPoints().addAll(7.5, 0.0, 15.0, 7.5, 7.5, 0.0, 0.0, 7.5, 7.5, 0.0);
+				p2.getPoints().addAll(7.5, 0.0, 15.0, 7.5, 7.5, 15.0, 0.0, 7.5, 7.5, 0.0);
 				return p2;
 			case TRIANGLE:				// Critter2
 				Polygon p3 = new Polygon();
@@ -683,10 +683,11 @@ public abstract class Critter {
 				return p3;
 			case FOURPOINT:				// Critter3
 				Polygon p4 = new Polygon();
-				p4.getPoints().addAll(7.5, 0.0, 9.5, 4.0, 15.0, 7.5, 9.5, 11.0, 7.5, 15.0, 5.5, 11.0, 0.0, 7.5, 5.5, 4.0, 7.5, 0.0);
+				p4.getPoints().addAll(7.5, 0.0, 8.5, 5.0, 15.0, 7.5, 8.5, 10.0, 7.5, 15.0, 6.5, 10.0, 0.0, 7.5, 6.5, 5.0, 7.5, 0.0);
 				return p4;
-			case SQUIGGLE:				// Critter4
-				Polyline p5 = new Polyline();
+			case BOLT:					// Critter4
+				Polygon p5 = new Polygon();
+				p5.getPoints().addAll(15.0, 0.0, 10.0, 5.0, 13.0, 7.0, 0.0, 15.0, 8.0, 7.0, 5.0, 5.0, 15.0, 0.0);
 				return p5;
 			case PENTAGON:				// Critter1
 				Polygon p6 = new Polygon();
@@ -736,7 +737,6 @@ public abstract class Critter {
 		for (int i = 0; i < Params.world_height; i++) {
 			g.getRowConstraints().add(new RowConstraints(worldController.boxSize));
 		}
-		//g.setPadding(new Insets(0,3,0,3));
 		g.getChildren().clear();
 		g.setGridLinesVisible(true);
 		for (int i = 0; i < Params.world_height; i++) {         // Rows

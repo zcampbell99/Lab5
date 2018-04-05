@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.controlsfx.control.CheckListView;
@@ -13,10 +14,6 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextField;
 
 import java.io.File;
 import java.io.IOException;
@@ -48,6 +45,7 @@ public class Controller {
     @FXML private Button make_btn;
     protected Stage stage;
     @FXML private Slider anim_slider;
+    @FXML private Label error_label;
 
     @FXML private CheckListView<String> checkListView;
 
@@ -120,6 +118,10 @@ public class Controller {
     // Step the number of times defined in the text field
     @FXML
     private void stepNumAction(ActionEvent ae) {
+        if (stepNum_field.getText().equals("")) {
+            Critter.worldTimeStep();
+            return;
+        }
         numSteps = Integer.parseInt(stepNum_field.getText());
         for (int i = 0; i < numSteps; i++) {
             Critter.worldTimeStep();
@@ -212,20 +214,24 @@ public class Controller {
         try {
             critterType = getCritters(ae);
             if (critterType == null) {
-                System.out.println("Please enter a valid critter type");
+                error_label.setText("Please enter a valid critter type");
                 return;
             }
             if (makeNum_field.getText().length() != 0) {
                 for (int i = 0; i < quantityMake; i++) {
                     Critter.makeCritter(critterType);
+                    error_label.setText(null);
                 }
-            } else
+            } else {
                 Critter.makeCritter(critterType);
-            System.out.println("made the critter(s)");
-
+                error_label.setText(null);
+            }
         } catch (InvalidCritterException e) {
-            System.out.println("error processing: " + critterType);
+            error_label.setText("Error processing: " + critterType);
         }
+        Scene scene = new Scene(Critter.displayGUIWorld(), (Params.world_width*worldController.boxSize)+15, (Params.world_height*worldController.boxSize)+15);
+        stage.setScene(scene);
+        stage.show();
 
     }
 

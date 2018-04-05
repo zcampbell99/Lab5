@@ -22,17 +22,17 @@ public class Critter4 extends Critter {
 
     @Override
     public javafx.scene.paint.Color viewOutlineColor() {
-        return Color.GREENYELLOW;
+        return Color.DARKORANGE;
     }
 
     @Override
     public javafx.scene.paint.Color viewFillColor() {
-        return Color.GREENYELLOW;
+        return Color.DARKORANGE;
     }
 
     @Override
     public CritterShape viewShape() {
-        return CritterShape.SQUIGGLE;
+        return CritterShape.BOLT;
     }
 
     /**
