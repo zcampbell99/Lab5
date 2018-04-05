@@ -2,8 +2,11 @@ package assignment5;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.RowConstraints;
 import javafx.scene.shape.*;
 
 import java.util.*;
@@ -18,7 +21,8 @@ public abstract class Critter {
 		DIAMOND,
 		STAR,
 		FOURPOINT,
-		SQUIGGLE
+		SQUIGGLE,
+		PENTAGON
 	}
 	
 	/* the default color is white, which I hope makes critters invisible by default
@@ -138,7 +142,7 @@ public abstract class Critter {
 
 	// Everything Down from here is from Project 4
 	private static LinkedList<Critter> allCritters = new LinkedList<Critter>();
-	private static HashMap<Point, LinkedList<Critter>> grid = new HashMap<Point, LinkedList<Critter>>();
+	protected static HashMap<Point, LinkedList<Critter>> grid = new HashMap<Point, LinkedList<Critter>>();
 	private static int timestep = 0;
 	private int x_coord;
 	private int y_coord;
@@ -658,53 +662,38 @@ public abstract class Critter {
 		switch (s) {
 			case SQUARE:				// Craig
 				Rectangle r = new Rectangle();
-				r.setHeight(13);
-				r.setWidth(13);
+				r.setHeight(15);
+				r.setWidth(15);
 				return r;
 			case STAR:					// Tragic
 				Polygon p1 = new Polygon();
+				p1.getPoints().addAll(7.5, 0.0, 11.0, 15.0, 0.0, 6.0, 15.0, 6.0, 4.0, 15.0, 7.5, 0.0);
 				return p1;
-			case CIRCLE:				// Critter1
+			case CIRCLE:				// Algae
 				Circle c = new Circle();
+				c.setRadius(7.5);
 				return c;
 			case DIAMOND:				// Algaephobic
 				Polygon p2 = new Polygon();
+				p2.getPoints().addAll(7.5, 0.0, 15.0, 7.5, 7.5, 0.0, 0.0, 7.5, 7.5, 0.0);
 				return p2;
 			case TRIANGLE:				// Critter2
 				Polygon p3 = new Polygon();
+				p3.getPoints().addAll(7.5, 0.0, 15.0, 15.0, 0.0, 15.0, 7.5, 0.0);
 				return p3;
 			case FOURPOINT:				// Critter3
 				Polygon p4 = new Polygon();
+				p4.getPoints().addAll(7.5, 0.0, 9.5, 4.0, 15.0, 7.5, 9.5, 11.0, 7.5, 15.0, 5.5, 11.0, 0.0, 7.5, 5.5, 4.0, 7.5, 0.0);
 				return p4;
 			case SQUIGGLE:				// Critter4
 				Polyline p5 = new Polyline();
 				return p5;
+			case PENTAGON:				// Critter1
+				Polygon p6 = new Polygon();
+				p6.getPoints().addAll(7.5, 0.0, 15.0, 6.0, 11.0, 15.0, 4.0, 15.0, 0.0, 6.0, 7.5, 0.0);
+				return p6;
 		}
 		return new Polygon();
-	}
-
-	public static void displayGUIWorld() {
-		worldController newControl = new worldController();
-		newControl.initialize();
-		FXMLLoader loader = new FXMLLoader(newControl.getClass().getResource("World.fxml"));
-		loader.setController(newControl);
-		for (int i = 0; i < Params.world_height; i++) {         // Rows
-			for (int j = 0; j < Params.world_width; j++) {      // Columns
-				Critter.Point p = new Critter.Point(j, i);
-				if (grid.containsKey(p)) {
-					LinkedList<Critter> currCritList = grid.get(p);   //finds the critter at this point to display
-					if (currCritList.size() >= 1) {
-						Critter.CritterShape currShape = currCritList.get(0).viewShape();
-						Shape poly = setShape(currShape);
-						poly.setFill(currCritList.get(0).viewFillColor());
-						newControl.worldGrid.setConstraints(poly, j, i);
-					} else {
-						//worldController.worldGrid.setRowIndex(null, i);
-						//worldController.worldGrid.setColumnIndex(null, j);
-					}
-				}
-			}
-		}
 	}
 
 	/**
@@ -735,10 +724,44 @@ public abstract class Critter {
 		}
 	}
 
+	protected static GridPane displayGUIWorld() {
+		GridPane g = new GridPane();
+		g.setLayoutX(5);
+		g.setLayoutY(5);
+		g.prefHeight(370);
+		g.prefWidth(570);
+		for (int i = 0; i < Params.world_width; i++) {
+			g.getColumnConstraints().add(new ColumnConstraints(worldController.boxSize));
+		}
+		for (int i = 0; i < Params.world_height; i++) {
+			g.getRowConstraints().add(new RowConstraints(worldController.boxSize));
+		}
+		//g.setPadding(new Insets(0,3,0,3));
+		g.getChildren().clear();
+		g.setGridLinesVisible(true);
+		for (int i = 0; i < Params.world_height; i++) {         // Rows
+			for (int j = 0; j < Params.world_width; j++) {      // Columns
+				Critter.Point p = new Critter.Point(j, i);
+				if (Critter.grid.containsKey(p)) {
+					LinkedList<Critter> currCritList = Critter.grid.get(p);   //finds the critter at this point to display
+					if (currCritList.size() >= 1) {
+						Critter.CritterShape currShape = currCritList.get(0).viewShape();
+						Shape shape = Critter.setShape(currShape);
+						shape.setFill(currCritList.get(0).viewFillColor());
+						g.add(shape, j, i);
+					} else {
+						g.add(null, j, i);
+					}
+				}
+			}
+		}
+		return g;
+	}
+
 	/**
 	 * class for a 2D point for the grid of critters
 	 **/
-	private static class Point {
+	protected static class Point {
 		private int x;
 		private int y;
 

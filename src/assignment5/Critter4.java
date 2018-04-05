@@ -51,13 +51,13 @@ public class Critter4 extends Critter {
      */
     public boolean fight(String opponent) {
         if (opponent.equals("4") || opponent.equals("C")) {
-            for(int i=0; i<8; i++){
-                String occupied = look(this.dir, true);
-                if(occupied.equals(null)){  //if the destination is unoccupied, run away
-                    run(this.dir);
-                    break;
-                }
-            }
+//            for(int i=0; i<8; i++){
+//                String occupied = look(this.dir, true);
+//                if(occupied.equals(null)){  //if the destination is unoccupied, run away
+//                    run(this.dir);
+//                    break;
+//                }
+//            }
             return false;
         }
         return true;

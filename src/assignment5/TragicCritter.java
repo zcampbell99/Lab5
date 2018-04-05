@@ -46,6 +46,6 @@ public class TragicCritter extends Critter {
 	public CritterShape viewShape() { return CritterShape.STAR; }
 
 	@Override
-	public javafx.scene.paint.Color viewOutlineColor() { return javafx.scene.paint.Color.CRIMSON; }
+	public javafx.scene.paint.Color viewFillColor() { return javafx.scene.paint.Color.CRIMSON; }
 
 }

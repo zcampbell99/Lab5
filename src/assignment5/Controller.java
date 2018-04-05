@@ -46,33 +46,17 @@ public class Controller {
     @FXML private Button animStart_btn;
     @FXML private Button animStop_btn;
     @FXML private Button make_btn;
+    protected Stage stage;
     @FXML private Slider anim_slider;
-    @FXML private CheckListView<String> checkListView;
 
+    @FXML private CheckListView<String> checkListView;
 
     // Runs on startup
     public void initialize() {
-//        try {
-//            Class<?> critter = Class.forName(myPackage + ".Critter");
-//            Class[] critterTypes = getClasses(myPackage);
-//            System.out.println("crittertypes size = " + critterTypes.length);
-//            for (Class c : critterTypes) {
-//                System.out.println("c = " + c.toString());
-//                if (critter.isAssignableFrom(c)) {
-//                    types_of_critters_text.getItems().addAll(c.getClass().toString());
-//                    //checkListView.getCheckModel().getCheckedItems().add(c.getName());
-//                }
-//            }
-//            checkListView.getCheckModel().getCheckedItems().addListener(new ListChangeListener<String>() {
-//                public void onChanged(ListChangeListener.Change<? extends String> c) {
-//                    System.out.println(checkListView.getCheckModel().getCheckedItems());
-//                }
-//            });
-//        } catch (ClassNotFoundException | IOException e) {
-//            e.printStackTrace();
-//        }
-
-        types_of_critters_text.getItems().addAll("Algae", "AlgaephobicCritter", "Craig", "Critter1", "Critter2", "Critter3", "Critter4", "TragicCritter");
+        for (String s : critters()) {
+            types_of_critters_text.getItems().add(s);
+            // checkListView stuff
+        }
         width_field.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue,
@@ -112,47 +96,10 @@ public class Controller {
         disableAll();
     }
 
-    private static Class[] getClasses(String packageName) throws ClassNotFoundException, IOException {
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        assert classLoader != null;
-        String path = packageName.replace('.', '/');
-        Enumeration resources = classLoader.getResources(path);
-        List dirs = new ArrayList();
-        while (resources.hasMoreElements()) {
-            URL resource = (URL)resources.nextElement();
-            dirs.add(new File(resource.getFile()));
-        }
-        ArrayList classes = new ArrayList();
-        for (Object directory : dirs) {
-            classes.addAll(findClasses((File)directory, packageName));
-        }
-        return (Class[])classes.toArray(new Class[classes.size()]);
-    }
-
-    private static List findClasses(File directory, String packageName) throws ClassNotFoundException {
-        List classes = new ArrayList();
-        if (!directory.exists()) {
-            return classes;
-        }
-        File[] files = directory.listFiles();
-        for (File file : files) {
-            if (file.isDirectory()) {
-                assert !file.getName().contains(".");
-                classes.addAll(findClasses(file, packageName + "." + file.getName()));
-            } else if (file.getName().endsWith(".class")) {
-                classes.add(Class.forName(packageName + '.' + file.getName().substring(0, file.getName().length() - 6)));
-            }
-        }
-        return classes;
-    }
-
-    // NOT DONE YET
     @FXML
     private void makeWorld(ActionEvent ae) throws IOException{
         width = Integer.parseInt(width_field.getText());
         height = Integer.parseInt(height_field.getText());
-        System.out.println("Width = " + width);
-        System.out.println("Height = " + height);
         Params.world_width = width;
         Params.world_height = height;
         width_field.setDisable(true);
@@ -164,9 +111,10 @@ public class Controller {
         Parent world = FXMLLoader.load(getClass().getResource("World.fxml"));
         Stage worldStage = new Stage();
         worldStage.setTitle("The Land of Critters");
-        worldStage.setScene(new Scene(world, (Params.world_width*worldController.boxSize)+25, (Params.world_height*worldController.boxSize)+25));
+        Scene gridScene = new Scene(world, (Params.world_width*worldController.boxSize)+15, (Params.world_height*worldController.boxSize)+15);
+        worldStage.setScene(gridScene);
+        stage = worldStage;
         worldStage.show();
-        //Critter.displayGUIWorld();                         // Need to update this to show the new window with the world
     }
 
     // Step the number of times defined in the text field
@@ -216,6 +164,9 @@ public class Controller {
     @FXML
     private void step1Action(ActionEvent ae) {
         Critter.worldTimeStep();
+        Scene scene = new Scene(Critter.displayGUIWorld(), (Params.world_width*worldController.boxSize)+15, (Params.world_height*worldController.boxSize)+15);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -223,6 +174,9 @@ public class Controller {
         for (int i = 0; i < 5; i++) {
             Critter.worldTimeStep();
         }
+        Scene scene = new Scene(Critter.displayGUIWorld(), (Params.world_width*worldController.boxSize)+15, (Params.world_height*worldController.boxSize)+15);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -230,6 +184,9 @@ public class Controller {
         for (int i = 0; i < 50; i++) {
             Critter.worldTimeStep();
         }
+        Scene scene = new Scene(Critter.displayGUIWorld(), (Params.world_width*worldController.boxSize)+15, (Params.world_height*worldController.boxSize)+15);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -237,6 +194,9 @@ public class Controller {
         for (int i = 0; i < 100; i++) {
             Critter.worldTimeStep();
         }
+        Scene scene = new Scene(Critter.displayGUIWorld(), (Params.world_width*worldController.boxSize)+15, (Params.world_height*worldController.boxSize)+15);
+        stage.setScene(scene);
+        stage.show();
     }
 
     // For the button "make"
@@ -262,7 +222,7 @@ public class Controller {
             } else
                 Critter.makeCritter(critterType);
             System.out.println("made the critter(s)");
-            Critter.displayGUIWorld();
+
         } catch (InvalidCritterException e) {
             System.out.println("error processing: " + critterType);
         }
@@ -311,6 +271,32 @@ public class Controller {
         }
     }
 
+    private ArrayList<String> critters() {
+        ArrayList<String> critterList = new ArrayList<>();
+        File folder = new File("./src/assignment5");
+        String[] srcFiles = folder.list();
+        try {
+            Class<?> critterClass = Class.forName("assignment5.Critter");
+            for (int i = 0; i < srcFiles.length; i++) {
+                if (srcFiles[i].length() >= 5) {
+                    String className = srcFiles[i].substring(0, srcFiles[i].length() - 5);
+                    String qualifiedName = "assignment5." + className;
+                    try {
+                        Class<?> c = Class.forName(qualifiedName);
+                        if (critterClass.isAssignableFrom(c)) {
+                            critterList.add(className);
+                        }
+                    } catch (ClassNotFoundException e) {
+                    }
+
+                }
+            }
+        } catch (ClassNotFoundException e) {}
+        critterList.remove("Critter");
+        return critterList;
+    }
+
+
 //    @FXML
 //    private String getStats(ActionEvent ae) {
 //        return stats_comboBox.getValue();
@@ -339,5 +325,7 @@ public class Controller {
     public void quitWorld(ActionEvent ae) {
         System.exit(0);
     }
+
+
 
 }
