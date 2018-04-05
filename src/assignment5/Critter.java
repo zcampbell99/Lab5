@@ -1,11 +1,9 @@
 package assignment5;
 
+import javafx.scene.Node;
+import javafx.scene.shape.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.layout.GridPane;
-import javafx.scene.shape.*;
-
 import java.util.*;
 import java.util.List;
 
@@ -20,27 +18,27 @@ public abstract class Critter {
 		FOURPOINT,
 		SQUIGGLE
 	}
-	
+
 	/* the default color is white, which I hope makes critters invisible by default
 	 * If you change the background color of your View component, then update the default
-	 * color to be the same as you background 
-	 * 
-	 * critters must override at least one of the following three methods, it is not 
+	 * color to be the same as you background
+	 *
+	 * critters must override at least one of the following three methods, it is not
 	 * proper for critters to remain invisible in the view
-	 * 
-	 * If a critter only overrides the outline color, then it will look like a non-filled 
-	 * shape, at least, that's the intent. You can edit these default methods however you 
-	 * need to, but please preserve that intent as you implement them. 
+	 *
+	 * If a critter only overrides the outline color, then it will look like a non-filled
+	 * shape, at least, that's the intent. You can edit these default methods however you
+	 * need to, but please preserve that intent as you implement them.
 	 */
-	public javafx.scene.paint.Color viewColor() { 
-		return javafx.scene.paint.Color.WHITE; 
+	public javafx.scene.paint.Color viewColor() {
+		return javafx.scene.paint.Color.WHITE;
 	}
-	
+
 	public javafx.scene.paint.Color viewOutlineColor() { return viewColor(); }
 	public javafx.scene.paint.Color viewFillColor() { return viewColor(); }
-	
-	public abstract CritterShape viewShape(); 
-	
+
+	public abstract CritterShape viewShape();
+
 	private static String myPackage;
 	private	static List<Critter> population = new java.util.ArrayList<Critter>();
 	private static List<Critter> babies = new java.util.ArrayList<Critter>();
@@ -654,6 +652,30 @@ public abstract class Critter {
 		}
 	}
 
+	public static void displayGUIWorld() {
+		worldController newControl = new worldController();
+		newControl.initialize();
+		FXMLLoader loader = new FXMLLoader(newControl.getClass().getResource("World.fxml"));
+		loader.setController(newControl);
+		for (int i = 0; i < Params.world_height; i++) {         // Rows
+			for (int j = 0; j < Params.world_width; j++) {      // Columns
+				Critter.Point p = new Critter.Point(j, i);
+				if (grid.containsKey(p)) {
+					LinkedList<Critter> currCritList = grid.get(p);   //finds the critter at this point to display
+					if (currCritList.size() >= 1) {
+						Critter.CritterShape currShape = currCritList.get(0).viewShape();
+						Shape poly = setShape(currShape);
+						poly.setFill(currCritList.get(0).viewFillColor());
+						newControl.worldGrid.setConstraints(poly, j, i);
+					} else {
+						//worldController.worldGrid.setRowIndex(null, i);
+						//worldController.worldGrid.setColumnIndex(null, j);
+					}
+				}
+			}
+		}
+	}
+
 	public static Shape setShape(CritterShape s) {
 		switch (s) {
 			case SQUARE:				// Craig
@@ -681,30 +703,6 @@ public abstract class Critter {
 				return p5;
 		}
 		return new Polygon();
-	}
-
-	public static void displayGUIWorld() {
-		worldController newControl = new worldController();
-		newControl.initialize();
-		FXMLLoader loader = new FXMLLoader(newControl.getClass().getResource("World.fxml"));
-		loader.setController(newControl);
-		for (int i = 0; i < Params.world_height; i++) {         // Rows
-			for (int j = 0; j < Params.world_width; j++) {      // Columns
-				Critter.Point p = new Critter.Point(j, i);
-				if (grid.containsKey(p)) {
-					LinkedList<Critter> currCritList = grid.get(p);   //finds the critter at this point to display
-					if (currCritList.size() >= 1) {
-						Critter.CritterShape currShape = currCritList.get(0).viewShape();
-						Shape poly = setShape(currShape);
-						poly.setFill(currCritList.get(0).viewFillColor());
-						newControl.worldGrid.setConstraints(poly, j, i);
-					} else {
-						//worldController.worldGrid.setRowIndex(null, i);
-						//worldController.worldGrid.setColumnIndex(null, j);
-					}
-				}
-			}
-		}
 	}
 
 	/**
