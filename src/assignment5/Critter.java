@@ -1,5 +1,7 @@
 package assignment5;
 
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.*;
@@ -597,7 +599,11 @@ public abstract class Critter {
 		return new Polygon();
 	}
 
-	public void displayGUIWorld() {
+	public static void displayGUIWorld() {
+		worldController newControl = new worldController();
+		newControl.initialize();
+		FXMLLoader loader = new FXMLLoader(newControl.getClass().getResource("World.fxml"));
+		loader.setController(newControl);
 		for (int i = 0; i < Params.world_height; i++) {         // Rows
 			for (int j = 0; j < Params.world_width; j++) {      // Columns
 				Critter.Point p = new Critter.Point(j, i);
@@ -606,8 +612,7 @@ public abstract class Critter {
 					if (currCritList.size() >= 1) {
 						Critter.CritterShape currShape = currCritList.get(0).viewShape();
 						Shape poly = setShape(currShape);
-						poly.setFill(currCritList.get(0).viewOutlineColor());
-						worldController newControl = new worldController();
+						poly.setFill(currCritList.get(0).viewFillColor());
 						newControl.worldGrid.setConstraints(poly, j, i);
 					} else {
 						//worldController.worldGrid.setRowIndex(null, i);

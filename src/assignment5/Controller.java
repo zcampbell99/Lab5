@@ -261,9 +261,12 @@ public class Controller {
                 }
             } else
                 Critter.makeCritter(critterType);
+            System.out.println("made the critter(s)");
+            Critter.displayGUIWorld();
         } catch (InvalidCritterException e) {
             System.out.println("error processing: " + critterType);
         }
+
     }
 
     // random seed for the world

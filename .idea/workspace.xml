@@ -3,15 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1a03f4c6-6795-4d18-bae1-9a57e8ba7db6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Critter$1.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Critter$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Critter$CritterShape.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Critter$CritterShape.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Controller.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Controller.class" />
       <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Critter$Point.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Critter$Point.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Critter$TestCritter.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Critter$TestCritter.class" />
       <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Critter.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/Critter.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/Critter4.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/5/assignment5/worldController.class" afterPath="$PROJECT_DIR$/out/production/5/assignment5/worldController.class" />
       <change beforePath="$PROJECT_DIR$/src/assignment5/Controller.java" afterPath="$PROJECT_DIR$/src/assignment5/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/src/assignment5/Craig.java" afterPath="$PROJECT_DIR$/src/assignment5/Craig.java" />
       <change beforePath="$PROJECT_DIR$/src/assignment5/Critter.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter.java" />
-      <change beforePath="$PROJECT_DIR$/src/assignment5/Critter4.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter4.java" />
       <change beforePath="$PROJECT_DIR$/src/assignment5/worldController.java" afterPath="$PROJECT_DIR$/src/assignment5/worldController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,25 +25,25 @@
       <file leaf-file-name="Craig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment5/Craig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="325">
+              <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Critter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Critter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment5/Critter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="609" column="75" lean-forward="true" selection-start-line="609" selection-start-column="75" selection-end-line="609" selection-end-column="75" />
+            <state relative-caret-position="406">
+              <caret line="614" column="74" lean-forward="true" selection-start-line="614" selection-start-column="74" selection-end-line="614" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="initializer##0;class#Critter#0" expanded="false" />
-                <element signature="e#2487#2488#0" expanded="true" />
-                <element signature="e#2518#2519#0" expanded="true" />
-                <element signature="e#2564#2565#0" expanded="true" />
-                <element signature="e#2608#2609#0" expanded="true" />
+                <element signature="e#2543#2544#0" expanded="true" />
+                <element signature="e#2574#2575#0" expanded="true" />
+                <element signature="e#2620#2621#0" expanded="true" />
+                <element signature="e#2664#2665#0" expanded="true" />
                 <element signature="docComment;method#setEnergy#0;class#Critter#0" expanded="false" />
                 <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
                 <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
@@ -66,10 +64,10 @@
                 <element signature="method#runStats2#0;class#Critter#0" expanded="false" />
                 <element signature="docComment;class#TestCritter#0;class#Critter#0" expanded="false" />
                 <element signature="class#TestCritter#0;class#Critter#0" expanded="false" />
-                <element signature="e#13544#13545#0" expanded="true" />
-                <element signature="e#13573#13574#0" expanded="true" />
-                <element signature="e#13605#13606#0" expanded="true" />
-                <element signature="e#13634#13635#0" expanded="true" />
+                <element signature="e#13600#13601#0" expanded="true" />
+                <element signature="e#13629#13630#0" expanded="true" />
+                <element signature="e#13661#13662#0" expanded="true" />
+                <element signature="e#13690#13691#0" expanded="true" />
                 <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
                 <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
                 <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
@@ -86,8 +84,8 @@
                 <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
                 <element signature="docComment;class#Point#0;class#Critter#0" expanded="false" />
                 <element signature="class#Point#0;class#Critter#0" expanded="false" />
-                <element signature="e#21389#21390#0" expanded="true" />
-                <element signature="e#21422#21423#0" expanded="true" />
+                <element signature="e#21595#21596#0" expanded="true" />
+                <element signature="e#21628#21629#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="worldController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="worldController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/assignment5/worldController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="273">
+              <caret line="13" column="81" lean-forward="true" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,8 +120,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment5/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+            <state relative-caret-position="525">
+              <caret line="263" column="51" lean-forward="false" selection-start-line="263" selection-start-column="51" selection-end-line="263" selection-end-column="51" />
               <folding>
                 <element signature="class#2992:3353" expanded="false" />
                 <element signature="class#3408:3770" expanded="false" />
@@ -131,6 +129,7 @@
                 <element signature="class#4245:4608" expanded="false" />
                 <element signature="method#getClasses#0;class#Controller#0" expanded="false" />
                 <element signature="method#findClasses#0;class#Controller#0" expanded="false" />
+                <element signature="method#makeWorld#0;class#Controller#0" expanded="false" />
                 <element signature="method#stepNumAction#0;class#Controller#0" expanded="false" />
                 <element signature="method#enableAll#0;class#Controller#0" expanded="false" />
                 <element signature="method#disableAll#0;class#Controller#0" expanded="false" />
@@ -141,8 +140,8 @@
                 <element signature="method#step100Action#0;class#Controller#0" expanded="false" />
                 <element signature="initializer##0;class#Controller#0" expanded="false" />
                 <element signature="method#statsAction#0;class#Controller#0" expanded="false" />
-                <element signature="e#12392#12393#0" expanded="true" />
-                <element signature="e#12422#12423#0" expanded="true" />
+                <element signature="e#12487#12488#0" expanded="true" />
+                <element signature="e#12517#12518#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/Controller.java" />
         <option value="$PROJECT_DIR$/src/assignment5/TragicCritter.java" />
         <option value="$PROJECT_DIR$/src/assignment5/AlgaephobicCritter.java" />
-        <option value="$PROJECT_DIR$/src/assignment5/Craig.java" />
         <option value="$PROJECT_DIR$/src/assignment5/SceneBuilderFile.fxml" />
         <option value="$PROJECT_DIR$/src/assignment5/world.fxml" />
         <option value="$PROJECT_DIR$/src/assignment5/World.fxml" />
@@ -200,6 +198,7 @@
         <option value="$PROJECT_DIR$/src/assignment5/Main.java" />
         <option value="$PROJECT_DIR$/src/assignment5/Critter4.java" />
         <option value="$PROJECT_DIR$/src/assignment5/Controller.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/Craig.java" />
         <option value="$PROJECT_DIR$/src/assignment5/Critter.java" />
         <option value="$PROJECT_DIR$/src/assignment5/worldController.java" />
       </list>
@@ -413,7 +412,7 @@
       <workItem from="1522798229403" duration="1484000" />
       <workItem from="1522801916560" duration="1879000" />
       <workItem from="1522804201876" duration="6017000" />
-      <workItem from="1522870819404" duration="16689000" />
+      <workItem from="1522870819404" duration="18901000" />
     </task>
     <task id="LOCAL-00001" summary="committing something">
       <created>1522693371494</created>
@@ -440,7 +439,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59352000" />
+    <option name="totallyTimeSpent" value="61564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -466,7 +465,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12707183" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -489,67 +488,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assignment5/Critter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2751">
-          <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="initializer##0;class#Critter#0" expanded="false" />
-            <element signature="e#2487#2488#0" expanded="true" />
-            <element signature="e#2518#2519#0" expanded="true" />
-            <element signature="e#2564#2565#0" expanded="true" />
-            <element signature="e#2608#2609#0" expanded="true" />
-            <element signature="docComment;method#setEnergy#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#updateLoc#0;class#Critter#0" expanded="false" />
-            <element signature="method#updateLoc#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#move#0;class#Critter#0" expanded="false" />
-            <element signature="method#move#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#reproduce#0;class#Critter#0" expanded="false" />
-            <element signature="method#reproduce#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#makeCritter#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#addToGrid#0;class#Critter#0" expanded="false" />
-            <element signature="method#addToGrid#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#getInstances#0;class#Critter#0" expanded="false" />
-            <element signature="method#getInstances#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#runStats#0;class#Critter#0" expanded="false" />
-            <element signature="method#runStats#0;class#Critter#0" expanded="false" />
-            <element signature="method#runStats2#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;class#TestCritter#0;class#Critter#0" expanded="false" />
-            <element signature="class#TestCritter#0;class#Critter#0" expanded="false" />
-            <element signature="e#13544#13545#0" expanded="true" />
-            <element signature="e#13573#13574#0" expanded="true" />
-            <element signature="e#13605#13606#0" expanded="true" />
-            <element signature="e#13634#13635#0" expanded="true" />
-            <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
-            <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
-            <element signature="method#worldTimeStep#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#encounters#0;class#Critter#0" expanded="false" />
-            <element signature="method#encounters#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#isAlive#0;class#Critter#0" expanded="false" />
-            <element signature="method#isAlive#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#updateRestEnergy#0;class#Critter#0" expanded="false" />
-            <element signature="method#updateRestEnergy#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#clearDead#0;class#Critter#0" expanded="false" />
-            <element signature="method#clearDead#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;method#displayWorld#0;class#Critter#0" expanded="false" />
-            <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
-            <element signature="docComment;class#Point#0;class#Critter#0" expanded="false" />
-            <element signature="class#Point#0;class#Critter#0" expanded="false" />
-            <element signature="e#21389#21390#0" expanded="true" />
-            <element signature="e#21422#21423#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/Craig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
@@ -563,12 +506,12 @@
         <state relative-caret-position="1953">
           <caret line="107" column="5" lean-forward="false" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
           <folding>
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="false" />
+            <element signature="e#546#547#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#651#652#0" expanded="false" />
+            <element signature="e#704#705#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -578,12 +521,12 @@
         <state relative-caret-position="1533">
           <caret line="87" column="5" lean-forward="false" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
           <folding>
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#547#548#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+            <element signature="e#655#656#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#750#751#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -593,12 +536,12 @@
         <state relative-caret-position="1596">
           <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="false" />
+            <element signature="e#618#619#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+            <element signature="e#723#724#0" expanded="false" />
+            <element signature="e#776#777#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -612,8 +555,8 @@
             <element signature="e#465#466#0" expanded="false" />
             <element signature="e#534#535#0" expanded="false" />
             <element signature="e#574#575#0" expanded="false" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#671#672#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -652,6 +595,7 @@
             <element signature="class#4245:4608" expanded="false" />
             <element signature="method#getClasses#0;class#Controller#0" expanded="false" />
             <element signature="method#findClasses#0;class#Controller#0" expanded="false" />
+            <element signature="method#makeWorld#0;class#Controller#0" expanded="false" />
             <element signature="method#stepNumAction#0;class#Controller#0" expanded="false" />
             <element signature="method#enableAll#0;class#Controller#0" expanded="false" />
             <element signature="method#disableAll#0;class#Controller#0" expanded="false" />
@@ -662,8 +606,8 @@
             <element signature="method#step100Action#0;class#Controller#0" expanded="false" />
             <element signature="initializer##0;class#Controller#0" expanded="false" />
             <element signature="method#statsAction#0;class#Controller#0" expanded="false" />
-            <element signature="e#12392#12393#0" expanded="true" />
-            <element signature="e#12422#12423#0" expanded="true" />
+            <element signature="e#12487#12488#0" expanded="true" />
+            <element signature="e#12517#12518#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -675,10 +619,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="initializer##0;class#Critter#0" expanded="false" />
-            <element signature="e#2487#2488#0" expanded="true" />
-            <element signature="e#2518#2519#0" expanded="true" />
-            <element signature="e#2564#2565#0" expanded="true" />
-            <element signature="e#2608#2609#0" expanded="true" />
+            <element signature="e#2543#2544#0" expanded="true" />
+            <element signature="e#2574#2575#0" expanded="true" />
+            <element signature="e#2620#2621#0" expanded="true" />
+            <element signature="e#2664#2665#0" expanded="true" />
             <element signature="docComment;method#setEnergy#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
@@ -698,10 +642,10 @@
             <element signature="method#runStats2#0;class#Critter#0" expanded="false" />
             <element signature="docComment;class#TestCritter#0;class#Critter#0" expanded="false" />
             <element signature="class#TestCritter#0;class#Critter#0" expanded="false" />
-            <element signature="e#13544#13545#0" expanded="true" />
-            <element signature="e#13573#13574#0" expanded="true" />
-            <element signature="e#13605#13606#0" expanded="true" />
-            <element signature="e#13634#13635#0" expanded="true" />
+            <element signature="e#13600#13601#0" expanded="true" />
+            <element signature="e#13629#13630#0" expanded="true" />
+            <element signature="e#13661#13662#0" expanded="true" />
+            <element signature="e#13690#13691#0" expanded="true" />
             <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
             <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
@@ -718,8 +662,8 @@
             <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
             <element signature="docComment;class#Point#0;class#Critter#0" expanded="false" />
             <element signature="class#Point#0;class#Critter#0" expanded="false" />
-            <element signature="e#21389#21390#0" expanded="true" />
-            <element signature="e#21422#21423#0" expanded="true" />
+            <element signature="e#21595#21596#0" expanded="true" />
+            <element signature="e#21628#21629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -737,12 +681,12 @@
         <state relative-caret-position="1533">
           <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
           <folding>
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#547#548#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+            <element signature="e#655#656#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#750#751#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -752,12 +696,12 @@
         <state relative-caret-position="1596">
           <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="false" />
+            <element signature="e#618#619#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+            <element signature="e#723#724#0" expanded="false" />
+            <element signature="e#776#777#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -767,12 +711,12 @@
         <state relative-caret-position="1953">
           <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
           <folding>
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="false" />
+            <element signature="e#546#547#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#651#652#0" expanded="false" />
+            <element signature="e#704#705#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -786,8 +730,8 @@
             <element signature="e#465#466#0" expanded="false" />
             <element signature="e#534#535#0" expanded="false" />
             <element signature="e#574#575#0" expanded="false" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#671#672#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -826,6 +770,7 @@
             <element signature="class#4245:4608" expanded="false" />
             <element signature="method#getClasses#0;class#Controller#0" expanded="false" />
             <element signature="method#findClasses#0;class#Controller#0" expanded="false" />
+            <element signature="method#makeWorld#0;class#Controller#0" expanded="false" />
             <element signature="method#stepNumAction#0;class#Controller#0" expanded="false" />
             <element signature="method#enableAll#0;class#Controller#0" expanded="false" />
             <element signature="method#disableAll#0;class#Controller#0" expanded="false" />
@@ -836,8 +781,8 @@
             <element signature="method#step100Action#0;class#Controller#0" expanded="false" />
             <element signature="initializer##0;class#Controller#0" expanded="false" />
             <element signature="method#statsAction#0;class#Controller#0" expanded="false" />
-            <element signature="e#12392#12393#0" expanded="true" />
-            <element signature="e#12422#12423#0" expanded="true" />
+            <element signature="e#12487#12488#0" expanded="true" />
+            <element signature="e#12517#12518#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -849,10 +794,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="initializer##0;class#Critter#0" expanded="false" />
-            <element signature="e#2487#2488#0" expanded="true" />
-            <element signature="e#2518#2519#0" expanded="true" />
-            <element signature="e#2564#2565#0" expanded="true" />
-            <element signature="e#2608#2609#0" expanded="true" />
+            <element signature="e#2543#2544#0" expanded="true" />
+            <element signature="e#2574#2575#0" expanded="true" />
+            <element signature="e#2620#2621#0" expanded="true" />
+            <element signature="e#2664#2665#0" expanded="true" />
             <element signature="docComment;method#setEnergy#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
@@ -872,10 +817,10 @@
             <element signature="method#runStats2#0;class#Critter#0" expanded="false" />
             <element signature="docComment;class#TestCritter#0;class#Critter#0" expanded="false" />
             <element signature="class#TestCritter#0;class#Critter#0" expanded="false" />
-            <element signature="e#13544#13545#0" expanded="true" />
-            <element signature="e#13573#13574#0" expanded="true" />
-            <element signature="e#13605#13606#0" expanded="true" />
-            <element signature="e#13634#13635#0" expanded="true" />
+            <element signature="e#13600#13601#0" expanded="true" />
+            <element signature="e#13629#13630#0" expanded="true" />
+            <element signature="e#13661#13662#0" expanded="true" />
+            <element signature="e#13690#13691#0" expanded="true" />
             <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
             <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
@@ -892,8 +837,8 @@
             <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
             <element signature="docComment;class#Point#0;class#Critter#0" expanded="false" />
             <element signature="class#Point#0;class#Critter#0" expanded="false" />
-            <element signature="e#21389#21390#0" expanded="true" />
-            <element signature="e#21422#21423#0" expanded="true" />
+            <element signature="e#21595#21596#0" expanded="true" />
+            <element signature="e#21628#21629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -911,12 +856,12 @@
         <state relative-caret-position="399">
           <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#547#548#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+            <element signature="e#655#656#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#750#751#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -926,12 +871,12 @@
         <state relative-caret-position="336">
           <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding>
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="false" />
+            <element signature="e#546#547#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#651#652#0" expanded="false" />
+            <element signature="e#704#705#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -941,12 +886,12 @@
         <state relative-caret-position="483">
           <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="false" />
+            <element signature="e#618#619#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+            <element signature="e#723#724#0" expanded="false" />
+            <element signature="e#776#777#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -960,8 +905,8 @@
             <element signature="e#465#466#0" expanded="false" />
             <element signature="e#534#535#0" expanded="false" />
             <element signature="e#574#575#0" expanded="false" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#671#672#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -989,6 +934,7 @@
             <element signature="class#4245:4608" expanded="false" />
             <element signature="method#getClasses#0;class#Controller#0" expanded="false" />
             <element signature="method#findClasses#0;class#Controller#0" expanded="false" />
+            <element signature="method#makeWorld#0;class#Controller#0" expanded="false" />
             <element signature="method#stepNumAction#0;class#Controller#0" expanded="false" />
             <element signature="method#enableAll#0;class#Controller#0" expanded="false" />
             <element signature="method#disableAll#0;class#Controller#0" expanded="false" />
@@ -999,8 +945,8 @@
             <element signature="method#step100Action#0;class#Controller#0" expanded="false" />
             <element signature="initializer##0;class#Controller#0" expanded="false" />
             <element signature="method#statsAction#0;class#Controller#0" expanded="false" />
-            <element signature="e#12392#12393#0" expanded="true" />
-            <element signature="e#12422#12423#0" expanded="true" />
+            <element signature="e#12487#12488#0" expanded="true" />
+            <element signature="e#12517#12518#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1023,10 +969,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="initializer##0;class#Critter#0" expanded="false" />
-            <element signature="e#2487#2488#0" expanded="true" />
-            <element signature="e#2518#2519#0" expanded="true" />
-            <element signature="e#2564#2565#0" expanded="true" />
-            <element signature="e#2608#2609#0" expanded="true" />
+            <element signature="e#2543#2544#0" expanded="true" />
+            <element signature="e#2574#2575#0" expanded="true" />
+            <element signature="e#2620#2621#0" expanded="true" />
+            <element signature="e#2664#2665#0" expanded="true" />
             <element signature="docComment;method#setEnergy#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
@@ -1046,10 +992,10 @@
             <element signature="method#runStats2#0;class#Critter#0" expanded="false" />
             <element signature="docComment;class#TestCritter#0;class#Critter#0" expanded="false" />
             <element signature="class#TestCritter#0;class#Critter#0" expanded="false" />
-            <element signature="e#13544#13545#0" expanded="true" />
-            <element signature="e#13573#13574#0" expanded="true" />
-            <element signature="e#13605#13606#0" expanded="true" />
-            <element signature="e#13634#13635#0" expanded="true" />
+            <element signature="e#13600#13601#0" expanded="true" />
+            <element signature="e#13629#13630#0" expanded="true" />
+            <element signature="e#13661#13662#0" expanded="true" />
+            <element signature="e#13690#13691#0" expanded="true" />
             <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
             <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
@@ -1066,8 +1012,8 @@
             <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
             <element signature="docComment;class#Point#0;class#Critter#0" expanded="false" />
             <element signature="class#Point#0;class#Critter#0" expanded="false" />
-            <element signature="e#21389#21390#0" expanded="true" />
-            <element signature="e#21422#21423#0" expanded="true" />
+            <element signature="e#21595#21596#0" expanded="true" />
+            <element signature="e#21628#21629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1085,12 +1031,12 @@
         <state relative-caret-position="399">
           <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#547#548#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+            <element signature="e#655#656#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#750#751#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1100,12 +1046,12 @@
         <state relative-caret-position="336">
           <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding>
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="false" />
+            <element signature="e#546#547#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#651#652#0" expanded="false" />
+            <element signature="e#704#705#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1115,12 +1061,12 @@
         <state relative-caret-position="483">
           <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="false" />
+            <element signature="e#618#619#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+            <element signature="e#723#724#0" expanded="false" />
+            <element signature="e#776#777#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1134,8 +1080,8 @@
             <element signature="e#465#466#0" expanded="false" />
             <element signature="e#534#535#0" expanded="false" />
             <element signature="e#574#575#0" expanded="false" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#671#672#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1174,6 +1120,7 @@
             <element signature="class#4245:4608" expanded="false" />
             <element signature="method#getClasses#0;class#Controller#0" expanded="false" />
             <element signature="method#findClasses#0;class#Controller#0" expanded="false" />
+            <element signature="method#makeWorld#0;class#Controller#0" expanded="false" />
             <element signature="method#stepNumAction#0;class#Controller#0" expanded="false" />
             <element signature="method#enableAll#0;class#Controller#0" expanded="false" />
             <element signature="method#disableAll#0;class#Controller#0" expanded="false" />
@@ -1184,8 +1131,8 @@
             <element signature="method#step100Action#0;class#Controller#0" expanded="false" />
             <element signature="initializer##0;class#Controller#0" expanded="false" />
             <element signature="method#statsAction#0;class#Controller#0" expanded="false" />
-            <element signature="e#12392#12393#0" expanded="true" />
-            <element signature="e#12422#12423#0" expanded="true" />
+            <element signature="e#12487#12488#0" expanded="true" />
+            <element signature="e#12517#12518#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1209,12 +1156,12 @@
         <state relative-caret-position="504">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#547#548#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+            <element signature="e#655#656#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#750#751#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1224,12 +1171,12 @@
         <state relative-caret-position="369">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="false" />
+            <element signature="e#546#547#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#651#652#0" expanded="false" />
+            <element signature="e#704#705#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1239,12 +1186,12 @@
         <state relative-caret-position="537">
           <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="false" />
+            <element signature="e#618#619#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+            <element signature="e#723#724#0" expanded="false" />
+            <element signature="e#776#777#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1273,20 +1220,9 @@
         <state relative-caret-position="192">
           <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
           <folding>
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#671#672#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/World.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,14 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/Craig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1318,54 +1246,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Craig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-          <folding>
-            <element signature="class#2992:3353" expanded="false" />
-            <element signature="class#3408:3770" expanded="false" />
-            <element signature="class#3826:4189" expanded="false" />
-            <element signature="class#4245:4608" expanded="false" />
-            <element signature="method#getClasses#0;class#Controller#0" expanded="false" />
-            <element signature="method#findClasses#0;class#Controller#0" expanded="false" />
-            <element signature="method#stepNumAction#0;class#Controller#0" expanded="false" />
-            <element signature="method#enableAll#0;class#Controller#0" expanded="false" />
-            <element signature="method#disableAll#0;class#Controller#0" expanded="false" />
-            <element signature="e#8710#8711#0" expanded="true" />
-            <element signature="e#8749#8750#0" expanded="true" />
-            <element signature="method#step5Action#0;class#Controller#0" expanded="false" />
-            <element signature="method#step50Action#0;class#Controller#0" expanded="false" />
-            <element signature="method#step100Action#0;class#Controller#0" expanded="false" />
-            <element signature="initializer##0;class#Controller#0" expanded="false" />
-            <element signature="method#statsAction#0;class#Controller#0" expanded="false" />
-            <element signature="e#12392#12393#0" expanded="true" />
-            <element signature="e#12422#12423#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="325">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/worldController.java">
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/scene/layout/GridPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="171">
+          <caret line="555" column="0" lean-forward="false" selection-start-line="555" selection-start-column="0" selection-end-line="555" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/World.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/Critter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="609" column="75" lean-forward="true" selection-start-line="609" selection-start-column="75" selection-end-line="609" selection-end-column="75" />
+        <state relative-caret-position="406">
+          <caret line="614" column="74" lean-forward="true" selection-start-line="614" selection-start-column="74" selection-end-line="614" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="initializer##0;class#Critter#0" expanded="false" />
-            <element signature="e#2487#2488#0" expanded="true" />
-            <element signature="e#2518#2519#0" expanded="true" />
-            <element signature="e#2564#2565#0" expanded="true" />
-            <element signature="e#2608#2609#0" expanded="true" />
+            <element signature="e#2543#2544#0" expanded="true" />
+            <element signature="e#2574#2575#0" expanded="true" />
+            <element signature="e#2620#2621#0" expanded="true" />
+            <element signature="e#2664#2665#0" expanded="true" />
             <element signature="docComment;method#setEnergy#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#walk#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#run#0;class#Critter#0" expanded="false" />
@@ -1386,10 +1304,10 @@
             <element signature="method#runStats2#0;class#Critter#0" expanded="false" />
             <element signature="docComment;class#TestCritter#0;class#Critter#0" expanded="false" />
             <element signature="class#TestCritter#0;class#Critter#0" expanded="false" />
-            <element signature="e#13544#13545#0" expanded="true" />
-            <element signature="e#13573#13574#0" expanded="true" />
-            <element signature="e#13605#13606#0" expanded="true" />
-            <element signature="e#13634#13635#0" expanded="true" />
+            <element signature="e#13600#13601#0" expanded="true" />
+            <element signature="e#13629#13630#0" expanded="true" />
+            <element signature="e#13661#13662#0" expanded="true" />
+            <element signature="e#13690#13691#0" expanded="true" />
             <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
             <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
             <element signature="docComment;method#worldTimeStep#0;class#Critter#0" expanded="false" />
@@ -1406,8 +1324,46 @@
             <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
             <element signature="docComment;class#Point#0;class#Critter#0" expanded="false" />
             <element signature="class#Point#0;class#Critter#0" expanded="false" />
-            <element signature="e#21389#21390#0" expanded="true" />
-            <element signature="e#21422#21423#0" expanded="true" />
+            <element signature="e#21595#21596#0" expanded="true" />
+            <element signature="e#21628#21629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="263" column="51" lean-forward="false" selection-start-line="263" selection-start-column="51" selection-end-line="263" selection-end-column="51" />
+          <folding>
+            <element signature="class#2992:3353" expanded="false" />
+            <element signature="class#3408:3770" expanded="false" />
+            <element signature="class#3826:4189" expanded="false" />
+            <element signature="class#4245:4608" expanded="false" />
+            <element signature="method#getClasses#0;class#Controller#0" expanded="false" />
+            <element signature="method#findClasses#0;class#Controller#0" expanded="false" />
+            <element signature="method#makeWorld#0;class#Controller#0" expanded="false" />
+            <element signature="method#stepNumAction#0;class#Controller#0" expanded="false" />
+            <element signature="method#enableAll#0;class#Controller#0" expanded="false" />
+            <element signature="method#disableAll#0;class#Controller#0" expanded="false" />
+            <element signature="e#8710#8711#0" expanded="true" />
+            <element signature="e#8749#8750#0" expanded="true" />
+            <element signature="method#step5Action#0;class#Controller#0" expanded="false" />
+            <element signature="method#step50Action#0;class#Controller#0" expanded="false" />
+            <element signature="method#step100Action#0;class#Controller#0" expanded="false" />
+            <element signature="initializer##0;class#Controller#0" expanded="false" />
+            <element signature="method#statsAction#0;class#Controller#0" expanded="false" />
+            <element signature="e#12487#12488#0" expanded="true" />
+            <element signature="e#12517#12518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/worldController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="81" lean-forward="true" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
