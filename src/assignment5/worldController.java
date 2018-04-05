@@ -8,7 +8,7 @@ import javafx.scene.layout.RowConstraints;
 
 public class worldController {
     protected static final int boxSize = 15;
-    @FXML protected static GridPane worldGrid;
+    @FXML protected GridPane worldGrid;
 
     public void initialize() {
         for (int i = 0; i < Params.world_width; i++) {

@@ -1,10 +1,7 @@
 package assignment5;
 
 import javafx.scene.Node;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Polygon;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
+import javafx.scene.shape.*;
 
 import java.util.*;
 import java.util.List;
@@ -18,7 +15,7 @@ public abstract class Critter {
 		DIAMOND,
 		STAR,
 		FOURPOINT,
-		SQUIGLE
+		SQUIGGLE
 	}
 	
 	/* the default color is white, which I hope makes critters invisible by default
@@ -578,12 +575,13 @@ public abstract class Critter {
 					LinkedList<Critter> currCritList = grid.get(p);   //finds the critter at this point to display
 					if (currCritList.size() >= 1) {
 						CritterShape currShape = currCritList.get(0).viewShape();
-						Polygon poly = (Polygon)setShape(currShape);
-						worldController.worldGrid.setRowIndex(poly, i);
-						worldController.worldGrid.setColumnIndex(poly, j);
+						Shape poly = setShape(currShape);
+						poly.setFill(currCritList.get(0).viewFillColor());
+						//worldController.worldGrid.setRowIndex(poly, i);
+						//worldController.worldGrid.setColumnIndex(poly, j);
 					} else {
-						worldController.worldGrid.setRowIndex(null, i);
-						worldController.worldGrid.setColumnIndex(null, j);
+						//worldController.worldGrid.setRowIndex(null, i);
+						//worldController.worldGrid.setColumnIndex(null, j);
 					}
 				}
 			}
@@ -591,28 +589,32 @@ public abstract class Critter {
 	}
 
 	public static Shape setShape(CritterShape s) {
-		Shape shape = new Polygon();
 		switch (s) {
 			case SQUARE:				// Craig
-				break;
+				Rectangle r = new Rectangle();
+				r.setHeight(13);
+				r.setWidth(13);
+				return r;
 			case STAR:					// Tragic
-				shape = new Polygon();
-				break;
+				Polygon p1 = new Polygon();
+				return p1;
 			case CIRCLE:				// Critter1
-				shape = new Circle();
-				break;
+				Circle c = new Circle();
+				return c;
 			case DIAMOND:				// Algaephobic
-				shape = new Polygon();
-				break;
+				Polygon p2 = new Polygon();
+				return p2;
 			case TRIANGLE:				// Critter2
-				shape = new Polygon();
-				break;
+				Polygon p3 = new Polygon();
+				return p3;
 			case FOURPOINT:				// Critter3
-				break;
-			case SQUIGLE:				// Critter4
-				break;
+				Polygon p4 = new Polygon();
+				return p4;
+			case SQUIGGLE:				// Critter4
+				Polyline p5 = new Polyline();
+				return p5;
 		}
-		return shape;
+		return new Polygon();
 	}
 
 	/**

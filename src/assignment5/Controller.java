@@ -155,7 +155,6 @@ public class Controller {
         System.out.println("Height = " + height);
         Params.world_width = width;
         Params.world_height = height;
-        Critter.displayWorld();                         // Need to update this to show the new window with the world
         width_field.setDisable(true);
         height_field.setDisable(true);
         create_btn.setDisable(true);
@@ -165,8 +164,9 @@ public class Controller {
         Parent world = FXMLLoader.load(getClass().getResource("World.fxml"));
         Stage worldStage = new Stage();
         worldStage.setTitle("The Land of Critters");
-        worldStage.setScene(new Scene(world, Params.world_width*worldController.boxSize+25, Params.world_height*worldController.boxSize+25));
+        worldStage.setScene(new Scene(world, (Params.world_width*worldController.boxSize)+25, (Params.world_height*worldController.boxSize)+25));
         worldStage.show();
+        //Critter.displayGUIWorld();                         // Need to update this to show the new window with the world
     }
 
     // Step the number of times defined in the text field
@@ -264,6 +264,7 @@ public class Controller {
         } catch (InvalidCritterException e) {
             System.out.println("error processing: " + critterType);
         }
+        Critter.displayGUIWorld();
     }
 
     // random seed for the world
