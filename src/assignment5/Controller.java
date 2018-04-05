@@ -327,27 +327,37 @@ public class Controller {
     private void animStart(ActionEvent ae) {
         disableAll();
         animStop_btn.setDisable(false); //only enables the disable button
-        animStop_btn.addEventFilter(MouseEvent.ANY, new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if (event.getEventType().equals(MouseEvent.MOUSE_PRESSED)) {
-                    return;
-                } else {
-                    double animSpeed = updateSlider(ae);
-                    for (int i = 0; i < animSpeed; i++) {
-                        Critter.worldTimeStep();
-                        Critter.displayGUIWorld();
-                    }
-                }
-
+        while(animStart_btn.isDisabled()){
+            double animSpeed = updateSlider(ae);
+            for (int i = 0; i < animSpeed; i++) {
+                Critter.worldTimeStep();
             }
-        });
+            Critter.displayGUIWorld();
+        }
+
+//        animStop_btn.addEventFilter(MouseEvent.ANY, new EventHandler<MouseEvent>() {
+//            @Override
+//            public void handle(MouseEvent event) {
+//                if (event.getEventType().equals(MouseEvent.MOUSE_PRESSED)) {
+//                    return;
+//                } else {
+//                    double animSpeed = updateSlider(ae);
+//                    for (int i = 0; i < animSpeed; i++) {
+//                        Critter.worldTimeStep();
+//                        Critter.displayGUIWorld();
+//                    }
+//                }
+//
+//            }
+//        });
     }
 
     @FXML
     private void animStop(ActionEvent ae) {
+//        animStop_btn.setOnAction(event ->{
+//
+//        });
         enableAll();
-
     }
 
     /**
