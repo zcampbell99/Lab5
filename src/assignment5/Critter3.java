@@ -35,9 +35,9 @@ public class Critter3 extends Critter {
         return Color.HOTPINK;
     }
 
-    // Temporary Shape
+    @Override
     public CritterShape viewShape() {
-        return CritterShape.STAR;
+        return CritterShape.FOURPOINT;
     }
 
     /**

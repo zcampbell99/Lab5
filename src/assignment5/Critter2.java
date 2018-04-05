@@ -31,9 +31,9 @@ public class Critter2 extends Critter {
         return Color.CRIMSON;
     }
 
-    // Temporary Shape
+    @Override
     public CritterShape viewShape() {
-        return CritterShape.STAR;
+        return CritterShape.TRIANGLE;
     }
 
     public Critter2() {

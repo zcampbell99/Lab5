@@ -1,5 +1,11 @@
 package assignment5;
 
+import javafx.scene.Node;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
+
 import java.util.*;
 import java.util.List;
 
@@ -10,7 +16,9 @@ public abstract class Critter {
 		SQUARE,
 		TRIANGLE,
 		DIAMOND,
-		STAR
+		STAR,
+		FOURPOINT,
+		SQUIGLE
 	}
 	
 	/* the default color is white, which I hope makes critters invisible by default
@@ -232,7 +240,7 @@ public abstract class Critter {
 
 
 	public abstract void doTimeStep();
-	public abstract boolean fight(String oponent);
+	public abstract boolean fight(String opponent);
 
 	/**
 	 * create and initialize a Critter subclass.
@@ -560,6 +568,51 @@ public abstract class Critter {
 				it.remove();
 			}
 		}
+	}
+
+	public static void displayGUIWorld() {
+		for (int i = 0; i < Params.world_height; i++) {         // Rows
+			for (int j = 0; j < Params.world_width; j++) {      // Columns
+				Point p = new Point(j, i);
+				if (grid.containsKey(p)) {
+					LinkedList<Critter> currCritList = grid.get(p);   //finds the critter at this point to display
+					if (currCritList.size() >= 1) {
+						CritterShape currShape = currCritList.get(0).viewShape();
+						Polygon poly = (Polygon)setShape(currShape);
+						worldController.worldGrid.setRowIndex(poly, i);
+						worldController.worldGrid.setColumnIndex(poly, j);
+					} else {
+						worldController.worldGrid.setRowIndex(null, i);
+						worldController.worldGrid.setColumnIndex(null, j);
+					}
+				}
+			}
+		}
+	}
+
+	public static Shape setShape(CritterShape s) {
+		Shape shape = new Polygon();
+		switch (s) {
+			case SQUARE:				// Craig
+				break;
+			case STAR:					// Tragic
+				shape = new Polygon();
+				break;
+			case CIRCLE:				// Critter1
+				shape = new Circle();
+				break;
+			case DIAMOND:				// Algaephobic
+				shape = new Polygon();
+				break;
+			case TRIANGLE:				// Critter2
+				shape = new Polygon();
+				break;
+			case FOURPOINT:				// Critter3
+				break;
+			case SQUIGLE:				// Critter4
+				break;
+		}
+		return shape;
 	}
 
 	/**

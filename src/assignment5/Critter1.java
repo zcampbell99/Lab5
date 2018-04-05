@@ -31,9 +31,9 @@ public class Critter1 extends Critter {
         return Color.BLUEVIOLET;
     }
 
-    // Temporary Shape
+    @Override
     public CritterShape viewShape() {
-        return CritterShape.STAR;
+        return CritterShape.CIRCLE;
     }
 
     public Critter1() {
