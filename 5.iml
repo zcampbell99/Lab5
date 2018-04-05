@@ -7,13 +7,18 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="controlsfx" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../controlsfx-9.0.0.jar!/" />
+          <root url="file://$MODULE_DIR$/../422C/controlsfx" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../422C/controlsfx" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../422C/controlsfx" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../422C/controlsfx" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>

@@ -3,9 +3,11 @@ package assignment5;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.controlsfx.control.CheckListView;
@@ -15,6 +17,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Slider;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 
@@ -316,11 +319,29 @@ public class Controller {
 //        return stats_comboBox.getValue();
 //    }
 
+    /**
+     * animates the world at the given speed of the slider
+     * @param ae
+     */
     @FXML
     private void animStart(ActionEvent ae) {
         disableAll();
-        animStop_btn.setDisable(false);
-        // Run the world at time given by slider
+        animStop_btn.setDisable(false); //only enables the disable button
+        animStop_btn.addEventFilter(MouseEvent.ANY, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.getEventType().equals(MouseEvent.MOUSE_PRESSED)) {
+                    return;
+                } else {
+                    double animSpeed = updateSlider(ae);
+                    for (int i = 0; i < animSpeed; i++) {
+                        Critter.worldTimeStep();
+                        Critter.displayGUIWorld();
+                    }
+                }
+
+            }
+        });
     }
 
     @FXML
@@ -329,9 +350,16 @@ public class Controller {
 
     }
 
+    /**
+     * Gets the value of the slider
+     * @param ae
+     */
     @FXML
-    private void updateSlider(ActionEvent ae) {
-
+    private double updateSlider(ActionEvent ae) {
+        while(!anim_slider.isValueChanging()){
+            return anim_slider.getValue();
+        }
+        return 1;
     }
 
     // Quit button
