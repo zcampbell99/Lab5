@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import org.controlsfx.control.CheckListView;
+//import org.controlsfx.control.CheckListView;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -47,7 +47,7 @@ public class Controller {
     @FXML private Slider anim_slider;
     @FXML private Label error_label;
 
-    @FXML private CheckListView<String> checkListView;
+//    @FXML private CheckListView<String> checkListView;
 
     // Runs on startup
     public void initialize() {
