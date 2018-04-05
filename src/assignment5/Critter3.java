@@ -55,6 +55,10 @@ public class Critter3 extends Critter {
      */
     public boolean fight(String not_used) {
         if (Critter.getRandomInt(10) <= 3) {
+            String occupied = look(this.dir,false);            //always looks before running away
+            if(!occupied.equals("1")){                              //only runs away if spot isn't occupied by an elephant
+                walk(Critter.getRandomInt(8));
+            }
             return true;
         }
         return false;

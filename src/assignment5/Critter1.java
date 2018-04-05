@@ -54,6 +54,7 @@ public class Critter1 extends Critter {
     @Override
     public void doTimeStep() {
         /* take one step forward */
+        look(this.dir,false);   //always looks before moving, only does for false because it only walks, doesn't care about the result b/c it wins all fights
         int doesMove = Critter.getRandomInt(10);
         if(doesMove <= 4){ //only moves with 50% chance
             walk(dir);
