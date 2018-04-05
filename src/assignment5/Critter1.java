@@ -12,6 +12,8 @@ package assignment5;
 
 import javafx.scene.paint.Color;
 
+import java.lang.reflect.Method;
+
 public class Critter1 extends Critter {
     //elephant Critter
     @Override
@@ -53,6 +55,7 @@ public class Critter1 extends Critter {
      */
     @Override
     public void doTimeStep() {
+        look(this.dir,false);   //always looks before moving, only does for false because it only walks, doesn't care about the result b/c it wins all fights
         /* take one step forward */
         int doesMove = Critter.getRandomInt(10);
         if(doesMove <= 4){ //only moves with 50% chance
