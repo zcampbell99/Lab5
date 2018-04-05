@@ -264,7 +264,6 @@ public class Controller {
         } catch (InvalidCritterException e) {
             System.out.println("error processing: " + critterType);
         }
-        Critter.displayGUIWorld();
     }
 
     // random seed for the world

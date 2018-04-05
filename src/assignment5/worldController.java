@@ -5,6 +5,9 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.RowConstraints;
+import javafx.scene.shape.Shape;
+
+import java.util.LinkedList;
 
 public class worldController {
     protected static final int boxSize = 15;

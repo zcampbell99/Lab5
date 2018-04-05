@@ -1,6 +1,7 @@
 package assignment5;
 
 import javafx.scene.Node;
+import javafx.scene.layout.GridPane;
 import javafx.scene.shape.*;
 
 import java.util.*;
@@ -567,27 +568,6 @@ public abstract class Critter {
 		}
 	}
 
-	public static void displayGUIWorld() {
-		for (int i = 0; i < Params.world_height; i++) {         // Rows
-			for (int j = 0; j < Params.world_width; j++) {      // Columns
-				Point p = new Point(j, i);
-				if (grid.containsKey(p)) {
-					LinkedList<Critter> currCritList = grid.get(p);   //finds the critter at this point to display
-					if (currCritList.size() >= 1) {
-						CritterShape currShape = currCritList.get(0).viewShape();
-						Shape poly = setShape(currShape);
-						poly.setFill(currCritList.get(0).viewFillColor());
-						//worldController.worldGrid.setRowIndex(poly, i);
-						//worldController.worldGrid.setColumnIndex(poly, j);
-					} else {
-						//worldController.worldGrid.setRowIndex(null, i);
-						//worldController.worldGrid.setColumnIndex(null, j);
-					}
-				}
-			}
-		}
-	}
-
 	public static Shape setShape(CritterShape s) {
 		switch (s) {
 			case SQUARE:				// Craig
@@ -615,6 +595,27 @@ public abstract class Critter {
 				return p5;
 		}
 		return new Polygon();
+	}
+
+	public void displayGUIWorld() {
+		for (int i = 0; i < Params.world_height; i++) {         // Rows
+			for (int j = 0; j < Params.world_width; j++) {      // Columns
+				Critter.Point p = new Critter.Point(j, i);
+				if (grid.containsKey(p)) {
+					LinkedList<Critter> currCritList = grid.get(p);   //finds the critter at this point to display
+					if (currCritList.size() >= 1) {
+						Critter.CritterShape currShape = currCritList.get(0).viewShape();
+						Shape poly = setShape(currShape);
+						poly.setFill(currCritList.get(0).viewOutlineColor());
+						worldController newControl = new worldController();
+						newControl.worldGrid.setConstraints(poly, j, i);
+					} else {
+						//worldController.worldGrid.setRowIndex(null, i);
+						//worldController.worldGrid.setColumnIndex(null, j);
+					}
+				}
+			}
+		}
 	}
 
 	/**

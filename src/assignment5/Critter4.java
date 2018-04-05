@@ -32,7 +32,7 @@ public class Critter4 extends Critter {
 
     @Override
     public CritterShape viewShape() {
-        return CritterShape.SQUIGLE;
+        return CritterShape.SQUIGGLE;
     }
 
     /**
