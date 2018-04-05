@@ -57,7 +57,7 @@ public abstract class Critter {
      * @param direction is the direction the critter wants to move in
      * @return the destination point of the critter
      */
-    public Point getNextPoint(Point currLoc, int steps, int direction){
+    public Point getNextPoint(Point currLoc, int steps, int direction) {
         Point new_pos = new Point(currLoc.x, currLoc.y);
         switch(direction) {
             case 0:                     // West
