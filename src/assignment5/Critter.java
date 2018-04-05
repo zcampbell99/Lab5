@@ -4,6 +4,7 @@ import javafx.scene.Node;
 import javafx.scene.shape.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.GridPane;
 import java.util.*;
 import java.util.List;
 
