@@ -1,26 +1,24 @@
 package assignment5;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
-import javafx.collections.ObservableList;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 //import org.controlsfx.control.CheckListView;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.net.URL;
 import java.util.*;
 
 public class Controller {
@@ -46,6 +44,7 @@ public class Controller {
     protected Stage stage;
     @FXML private Slider anim_slider;
     @FXML private Label error_label;
+    private Timeline timeline = new Timeline();
 
 //    @FXML private CheckListView<String> checkListView;
 
@@ -312,18 +311,47 @@ public class Controller {
     private void animStart(ActionEvent ae) {
         disableAll();
         animStop_btn.setDisable(false);
+        anim_slider.setDisable(false);
+        double timeEst = updateSlider(ae);
+        KeyFrame k = new KeyFrame(Duration.millis((100*timeEst)/3),
+                e -> animation(ae));
+        timeline.getKeyFrames().add(k);
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
         // Run the world at time given by slider
+//
+//        if(animStop_btn.isPressed()){
+//            timeline.stop();
+//            enableAll();
+//        }
     }
 
     @FXML
     private void animStop(ActionEvent ae) {
+        if (!timeline.equals(null)) {
+            timeline.stop();
+        }
         enableAll();
-
     }
 
     @FXML
-    private void updateSlider(ActionEvent ae) {
+    private double updateSlider(ActionEvent ae) {
+        while(!anim_slider.isValueChanging()){
+            return anim_slider.getValue();
+        }
+        return 1;
+    }
 
+    @FXML
+    private void animation(ActionEvent ae){
+        double animSpeed = updateSlider(ae);
+        for (int i = 0; i < animSpeed; i++) {
+            Critter.worldTimeStep();
+        }
+        Scene scene = new Scene(Critter.displayGUIWorld(), (Params.world_width*worldController.boxSize)+15, (Params.world_height*worldController.boxSize)+15);
+        stage.setScene(scene);
+        stage.show();
+        //TODO add runstats
     }
 
     // Quit button
