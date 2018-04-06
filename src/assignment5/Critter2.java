@@ -81,18 +81,18 @@ public class Critter2 extends Critter {
             child.genes[g] += 1;
             reproduce(child, Critter.getRandomInt(8));
 
-            Critter2 child2 = new Critter2();           //creates a second child each time it reproduces
-            for (int k = 0; k < 8; k += 1) {
-                child2.genes[k] = this.genes[k];
-            }
-            int g2 = Critter.getRandomInt(8);
-            while (child2.genes[g] == 0) {
-                g2 = Critter.getRandomInt(8);
-            }
-            child.genes[g2] -= 1;
-            g2 = Critter.getRandomInt(8);
-            child.genes[g2] += 1;
-            reproduce(child2, Critter.getRandomInt(8));
+//            Critter2 child2 = new Critter2();           //creates a second child each time it reproduces
+//            for (int k = 0; k < 8; k += 1) {
+//                child2.genes[k] = this.genes[k];
+//            }
+//            int g2 = Critter.getRandomInt(8);
+//            while (child2.genes[g] == 0) {
+//                g2 = Critter.getRandomInt(8);
+//            }
+//            child.genes[g2] -= 1;
+//            g2 = Critter.getRandomInt(8);
+//            child.genes[g2] += 1;
+//            reproduce(child2, Critter.getRandomInt(8));
         }
 
         /* pick a new direction based on our genes */

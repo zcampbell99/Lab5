@@ -342,7 +342,6 @@ public class Controller {
         return 1;
     }
 
-    @FXML
     private void animation(ActionEvent ae){
         double animSpeed = updateSlider(ae);
         for (int i = 0; i < animSpeed; i++) {
