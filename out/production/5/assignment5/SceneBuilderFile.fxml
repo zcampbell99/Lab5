@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextArea?>
@@ -83,7 +84,12 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <TextArea layoutX="6.0" layoutY="29.0" prefHeight="136.0" prefWidth="374.0" />
+            <TextArea fx:id="stats_textArea" layoutX="14.0" layoutY="70.0" prefHeight="91.0" prefWidth="374.0" />
+            <MenuButton fx:id="split_menu" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" text="Type of Critter">
+              <items>
+
+              </items>
+            </MenuButton>
          </children>
       </AnchorPane>
    </children>
